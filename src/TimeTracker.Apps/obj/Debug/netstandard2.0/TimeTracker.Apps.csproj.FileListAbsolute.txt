@@ -1,0 +1,16 @@
+/Users/bernagaudtristan/Documents/M1/semestre 2/Developpement_multi_plateforme/TP/Xamarin/TP1/Cours-Xamarin/project/src/TimeTracker.Apps/bin/Debug/netstandard2.0/TimeTracker.Apps.deps.json
+/Users/bernagaudtristan/Documents/M1/semestre 2/Developpement_multi_plateforme/TP/Xamarin/TP1/Cours-Xamarin/project/src/TimeTracker.Apps/bin/Debug/netstandard2.0/TimeTracker.Apps.dll
+/Users/bernagaudtristan/Documents/M1/semestre 2/Developpement_multi_plateforme/TP/Xamarin/TP1/Cours-Xamarin/project/src/TimeTracker.Apps/bin/Debug/netstandard2.0/TimeTracker.Apps.pdb
+/Users/bernagaudtristan/Documents/M1/semestre 2/Developpement_multi_plateforme/TP/Xamarin/TP1/Cours-Xamarin/project/src/TimeTracker.Apps/obj/Debug/netstandard2.0/TimeTracker.Apps.csproj.AssemblyReference.cache
+/Users/bernagaudtristan/Documents/M1/semestre 2/Developpement_multi_plateforme/TP/Xamarin/TP1/Cours-Xamarin/project/src/TimeTracker.Apps/obj/Debug/netstandard2.0/TimeTracker.Apps.GeneratedMSBuildEditorConfig.editorconfig
+/Users/bernagaudtristan/Documents/M1/semestre 2/Developpement_multi_plateforme/TP/Xamarin/TP1/Cours-Xamarin/project/src/TimeTracker.Apps/obj/Debug/netstandard2.0/App.xaml.g.cs
+/Users/bernagaudtristan/Documents/M1/semestre 2/Developpement_multi_plateforme/TP/Xamarin/TP1/Cours-Xamarin/project/src/TimeTracker.Apps/obj/Debug/netstandard2.0/Pages/MainPage.xaml.g.cs
+/Users/bernagaudtristan/Documents/M1/semestre 2/Developpement_multi_plateforme/TP/Xamarin/TP1/Cours-Xamarin/project/src/TimeTracker.Apps/obj/Debug/netstandard2.0/TimeTracker.Apps.AssemblyInfoInputs.cache
+/Users/bernagaudtristan/Documents/M1/semestre 2/Developpement_multi_plateforme/TP/Xamarin/TP1/Cours-Xamarin/project/src/TimeTracker.Apps/obj/Debug/netstandard2.0/TimeTracker.Apps.AssemblyInfo.cs
+/Users/bernagaudtristan/Documents/M1/semestre 2/Developpement_multi_plateforme/TP/Xamarin/TP1/Cours-Xamarin/project/src/TimeTracker.Apps/obj/Debug/netstandard2.0/TimeTracker.Apps.csproj.CoreCompileInputs.cache
+/Users/bernagaudtristan/Documents/M1/semestre 2/Developpement_multi_plateforme/TP/Xamarin/TP1/Cours-Xamarin/project/src/TimeTracker.Apps/obj/Debug/netstandard2.0/XamlC.stamp
+/Users/bernagaudtristan/Documents/M1/semestre 2/Developpement_multi_plateforme/TP/Xamarin/TP1/Cours-Xamarin/project/src/TimeTracker.Apps/obj/Debug/netstandard2.0/TimeTracker.Apps.dll
+/Users/bernagaudtristan/Documents/M1/semestre 2/Developpement_multi_plateforme/TP/Xamarin/TP1/Cours-Xamarin/project/src/TimeTracker.Apps/obj/Debug/netstandard2.0/TimeTracker.Apps.pdb
+/Users/bernagaudtristan/Documents/M1/semestre 2/Developpement_multi_plateforme/TP/Xamarin/TP1/Cours-Xamarin/project/src/TimeTracker.Apps/obj/Debug/netstandard2.0/Pages/ListProjet.xaml.g.cs
+/Users/bernagaudtristan/Documents/M1/semestre 2/Developpement_multi_plateforme/TP/Xamarin/TP1/Cours-Xamarin/project/src/TimeTracker.Apps/obj/Debug/netstandard2.0/Pages/AddOrEdit.xaml.g.cs
+/Users/bernagaudtristan/Documents/M1/semestre 2/Developpement_multi_plateforme/TP/Xamarin/TP1/Cours-Xamarin/project/src/TimeTracker.Apps/obj/Debug/netstandard2.0/Pages/PageInscription.xaml.g.cs
