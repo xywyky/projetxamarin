@@ -2,28 +2,25 @@
 <forms:BaseContentPage
  xmlns:forms="clr-namespace:Storm.Mvvm.Forms;assembly=Storm.Mvvm.Forms"
     xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="TimeTracker.Apps.Pages.EditProfil">
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="TimeTracker.Apps.Pages.EditPass">
 
         <StackLayout Orientation="Vertical">
 
-        <Label Text="Edit Profil "
+        <Label Text="Edit Password "
                TextDecorations="Underline" 
                FontSize = "50" />
 
-        <Entry Text="{Binding Email, Mode=TwoWay}"
+        <Entry Text="{Binding Old_password}"
                HorizontalOptions="FillAndExpand"
                HeightRequest="64"/>
-        <Entry Text="{Binding First_name, Mode=TwoWay}"
+        <Entry Text="{Binding New_password}"
                HorizontalOptions="FillAndExpand"
                HeightRequest="64"
                />
-        <Entry Text="{Binding Last_name, Mode=TwoWay}"
-               HorizontalOptions="FillAndExpand"
-               HeightRequest="64"
-                />
-       <Grid RowDefinitions="*,*">
-         <Grid ColumnDefinitions="*,*" Grid.Row="0">
+
+        
+         <Grid ColumnDefinitions="*,*" >
 
 
                         <Button Grid.Column="0"
@@ -45,19 +42,6 @@
                         />
         
          </Grid>
-
-
-            <Button Grid.Row="1"
-                                Text="Modification MDP"
-                                TextColor="White"
-                                BackgroundColor="Brown"
-                                CornerRadius="32"
-                                HeightRequest="64"
-                                Command="{Binding ChangePassCommand}"
-                                CommandParameter="{Binding .}"
-                        />
-
-           </Grid>
     </StackLayout>
 
 

@@ -23,7 +23,6 @@ namespace TimeTracker.Apps.Services
 
         public Profil ME;
 
-
         public List<Datum> Projet;
 
         public ApiService()
@@ -162,6 +161,29 @@ namespace TimeTracker.Apps.Services
             var response = await client.SendAsync(request);
 
             return response;
+
+        }
+
+        public async Task patchpasswordAsync(string old_pass, string new_pass)
+        {
+            var values = new Dictionary<string, string>
+            {
+                { "old_password", old_pass },
+                { "new_password", new_pass}
+            };
+
+            var json = JsonConvert.SerializeObject(values);
+            var content =
+                new StringContent(json, Encoding.UTF8, "application/json");
+
+            var method = new HttpMethod("PATCH");
+
+            var request = new HttpRequestMessage(method, "api/v1/password")
+            {
+                Content = content
+            };
+
+            client.SendAsync(request);
 
         }
 

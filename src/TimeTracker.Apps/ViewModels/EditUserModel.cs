@@ -35,6 +35,7 @@ namespace TimeTracker.Apps.ViewModels
 
         public ICommand ChangeCommand { get; }
         public ICommand RetourCommand { get; }
+        public ICommand ChangePassCommand { get; }
 
         public override Task OnResume()
         {
@@ -65,6 +66,13 @@ namespace TimeTracker.Apps.ViewModels
         {
             ChangeCommand = new Command(ChangeActionAsync);
             RetourCommand = new Command(RetourActionAsync);
+            ChangePassCommand = new Command(ChangePassAsync);
+
+        }
+
+        private async void ChangePassAsync()
+        {
+            await NavigationService.PushAsync<EditPass>();
         }
 
         private async void RetourActionAsync()
@@ -80,9 +88,7 @@ namespace TimeTracker.Apps.ViewModels
             string LN = Last_name;
             string email = Email;
             
-            Console.WriteLine("lala");
-
-            var response = todoService.patchMe(email, LN, FN);
+            todoService.patchMe(email, LN, FN);
 
             await NavigationService.PushAsync<ListProjet>();
         }
