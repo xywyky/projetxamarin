@@ -10,7 +10,7 @@
       "TimeTracker.Apps/1.0.0": {
         "dependencies": {
           "Microcharts.Forms": "1.0.0-preview1",
-          "MonkeyCache.SQLite": "1.5.2",
+          "MonkeyCache.SQLite": "1.6.2",
           "NETStandard.Library": "2.0.3",
           "Newtonsoft.Json": "13.0.1",
           "SkiaSharp.Views.Forms": "2.80.3",
@@ -41,7 +41,7 @@
         }
       },
       "Microsoft.NETCore.Platforms/1.1.0": {},
-      "MonkeyCache/1.5.2": {
+      "MonkeyCache/1.6.2": {
         "dependencies": {
           "Newtonsoft.Json": "13.0.1"
         },
@@ -52,11 +52,11 @@
           }
         }
       },
-      "MonkeyCache.SQLite/1.5.2": {
+      "MonkeyCache.SQLite/1.6.2": {
         "dependencies": {
-          "MonkeyCache": "1.5.2",
+          "MonkeyCache": "1.6.2",
           "Newtonsoft.Json": "13.0.1",
-          "sqlite-net-pcl": "1.7.335"
+          "sqlite-net-pcl": "1.8.116"
         },
         "runtime": {
           "lib/netstandard2.0/MonkeyCache.SQLite.dll": {
@@ -95,50 +95,50 @@
           "Xamarin.Forms": "5.0.0.2337"
         }
       },
-      "sqlite-net-pcl/1.7.335": {
+      "sqlite-net-pcl/1.8.116": {
         "dependencies": {
-          "SQLitePCLRaw.bundle_green": "2.0.3"
+          "SQLitePCLRaw.bundle_green": "2.0.4"
         },
         "runtime": {
           "lib/netstandard2.0/SQLite-net.dll": {
-            "assemblyVersion": "1.7.335.0",
-            "fileVersion": "1.7.335.0"
+            "assemblyVersion": "1.8.116.0",
+            "fileVersion": "1.8.116.0"
           }
         }
       },
-      "SQLitePCLRaw.bundle_green/2.0.3": {
+      "SQLitePCLRaw.bundle_green/2.0.4": {
         "dependencies": {
-          "SQLitePCLRaw.core": "2.0.3",
-          "SQLitePCLRaw.lib.e_sqlite3": "2.0.3",
-          "SQLitePCLRaw.provider.e_sqlite3": "2.0.3"
+          "SQLitePCLRaw.core": "2.0.4",
+          "SQLitePCLRaw.lib.e_sqlite3": "2.0.4",
+          "SQLitePCLRaw.provider.e_sqlite3": "2.0.4"
         },
         "runtime": {
           "lib/netstandard2.0/SQLitePCLRaw.batteries_v2.dll": {
-            "assemblyVersion": "2.0.3.851",
-            "fileVersion": "2.0.3.851"
+            "assemblyVersion": "2.0.4.976",
+            "fileVersion": "2.0.4.976"
           }
         }
       },
-      "SQLitePCLRaw.core/2.0.3": {
+      "SQLitePCLRaw.core/2.0.4": {
         "dependencies": {
           "System.Memory": "4.5.3"
         },
         "runtime": {
           "lib/netstandard2.0/SQLitePCLRaw.core.dll": {
-            "assemblyVersion": "2.0.3.851",
-            "fileVersion": "2.0.3.851"
+            "assemblyVersion": "2.0.4.976",
+            "fileVersion": "2.0.4.976"
           }
         }
       },
-      "SQLitePCLRaw.lib.e_sqlite3/2.0.3": {},
-      "SQLitePCLRaw.provider.e_sqlite3/2.0.3": {
+      "SQLitePCLRaw.lib.e_sqlite3/2.0.4": {},
+      "SQLitePCLRaw.provider.e_sqlite3/2.0.4": {
         "dependencies": {
-          "SQLitePCLRaw.core": "2.0.3"
+          "SQLitePCLRaw.core": "2.0.4"
         },
         "runtime": {
           "lib/netstandard2.0/SQLitePCLRaw.provider.e_sqlite3.dll": {
-            "assemblyVersion": "2.0.3.851",
-            "fileVersion": "2.0.3.851"
+            "assemblyVersion": "2.0.4.976",
+            "fileVersion": "2.0.4.976"
           }
         }
       },
@@ -240,19 +240,19 @@
       "path": "microsoft.netcore.platforms/1.1.0",
       "hashPath": "microsoft.netcore.platforms.1.1.0.nupkg.sha512"
     },
-    "MonkeyCache/1.5.2": {
+    "MonkeyCache/1.6.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-RdR4LyW7MemYfnQ1nNMfL7xZZFFKHUdF2TG7rd/sYDBQNcJ4sFSPK3YdaJleEKXGpova01cqdttFbXN+fE+FQg==",
-      "path": "monkeycache/1.5.2",
-      "hashPath": "monkeycache.1.5.2.nupkg.sha512"
+      "sha512": "sha512-AqHXynETkL6uwhDOccFrfpuMYPnIyyVETmxLj2PXjmTMoEUmUu8JrMEVnL35QcRo74jP2cI5hxDDpOIbiO95aw==",
+      "path": "monkeycache/1.6.2",
+      "hashPath": "monkeycache.1.6.2.nupkg.sha512"
     },
-    "MonkeyCache.SQLite/1.5.2": {
+    "MonkeyCache.SQLite/1.6.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-48RnppmExzM2dDEyhplXicb5vF2B2qkEcutzT5kERuoAjnXTMckdy7Nq+PuhANWQv5dOOhndLZ/sq2W75ODqOA==",
-      "path": "monkeycache.sqlite/1.5.2",
-      "hashPath": "monkeycache.sqlite.1.5.2.nupkg.sha512"
+      "sha512": "sha512-cUao8JD332xck3bGEvlA1sRgMWvySinuuWjoDChA0ZNIUNbaprC2vvLG4l+p3UVr9c+eEtSS1B37zbIAUfVm0Q==",
+      "path": "monkeycache.sqlite/1.6.2",
+      "hashPath": "monkeycache.sqlite.1.6.2.nupkg.sha512"
     },
     "NETStandard.Library/2.0.3": {
       "type": "package",
@@ -282,40 +282,40 @@
       "path": "skiasharp.views.forms/2.80.3",
       "hashPath": "skiasharp.views.forms.2.80.3.nupkg.sha512"
     },
-    "sqlite-net-pcl/1.7.335": {
+    "sqlite-net-pcl/1.8.116": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-0A9YNPbp66aB+Sitxmh9lq1KDtD4+EBPfdtnYN8WenvQqh5dNgMxUV7kaEG6EXYTi4zBxcsDKpyYJzbViWJXtw==",
-      "path": "sqlite-net-pcl/1.7.335",
-      "hashPath": "sqlite-net-pcl.1.7.335.nupkg.sha512"
+      "sha512": "sha512-W0NuwAOVVAR9LP4eZwNBIrim1p3EN7t8iNfSHXEhtzKAd4YyItekoQ8NyWYs4faVSrN2KZr/P5u4hycCjKKexg==",
+      "path": "sqlite-net-pcl/1.8.116",
+      "hashPath": "sqlite-net-pcl.1.8.116.nupkg.sha512"
     },
-    "SQLitePCLRaw.bundle_green/2.0.3": {
+    "SQLitePCLRaw.bundle_green/2.0.4": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-QgevRdYSy/MtL1TDdWuhoCH5cpBPZYUZd8h/WqgiLGXDa8e93Fv4/SE812SDCdjTb2+6s8SIwSLRq0z2bUeieg==",
-      "path": "sqlitepclraw.bundle_green/2.0.3",
-      "hashPath": "sqlitepclraw.bundle_green.2.0.3.nupkg.sha512"
+      "sha512": "sha512-ubFgOHDmtTcq2LU7Ss10yHnFVMm2rFVr65Ggi+Mh514KjGx4pal98P2zSvZtWf3wbtJw6G1InBgeozBtnpEfKQ==",
+      "path": "sqlitepclraw.bundle_green/2.0.4",
+      "hashPath": "sqlitepclraw.bundle_green.2.0.4.nupkg.sha512"
     },
-    "SQLitePCLRaw.core/2.0.3": {
+    "SQLitePCLRaw.core/2.0.4": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-9LO3qT7tP+0qBAQxg/PGLHPcsKri4H2zIiiMEg+7EGrnBbuUnJg1tcfKiiqFtRp74kZSAV6N0ZeSGYiodqYnoQ==",
-      "path": "sqlitepclraw.core/2.0.3",
-      "hashPath": "sqlitepclraw.core.2.0.3.nupkg.sha512"
+      "sha512": "sha512-4XlDZpDAsboMD6qZQcz9AaKblKDUTVHF+8f3lvbP7QjoqSRr2Xc0Lm34IK2pjRIYnyFLhI3yOJ5YWfOiCid2yg==",
+      "path": "sqlitepclraw.core/2.0.4",
+      "hashPath": "sqlitepclraw.core.2.0.4.nupkg.sha512"
     },
-    "SQLitePCLRaw.lib.e_sqlite3/2.0.3": {
+    "SQLitePCLRaw.lib.e_sqlite3/2.0.4": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-VSTQBlcPOcqCCxXnXwo8N2msQuE/Hd6oKpZ5Nn022tq5/+liyx5uEYNw6Hj8logTdkuq+3Nlq7qYQhraFWn1wg==",
-      "path": "sqlitepclraw.lib.e_sqlite3/2.0.3",
-      "hashPath": "sqlitepclraw.lib.e_sqlite3.2.0.3.nupkg.sha512"
+      "sha512": "sha512-oetvmtDZOE4Nnrtxd8Trapl9geBiu0rDCUXff46qGYjnUwzaU1mZ3OHnfR402tl32rx8gBWg3n5OBRaPJRbsGw==",
+      "path": "sqlitepclraw.lib.e_sqlite3/2.0.4",
+      "hashPath": "sqlitepclraw.lib.e_sqlite3.2.0.4.nupkg.sha512"
     },
-    "SQLitePCLRaw.provider.e_sqlite3/2.0.3": {
+    "SQLitePCLRaw.provider.e_sqlite3/2.0.4": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-f2bwfPhD91dJ6KnjOw01KDT68zl7qpeX4+lC0mmKa+eA91Huya8hdNan73B3q7jEDLMFU/dkv7l5wqrqGB4QoQ==",
-      "path": "sqlitepclraw.provider.e_sqlite3/2.0.3",
-      "hashPath": "sqlitepclraw.provider.e_sqlite3.2.0.3.nupkg.sha512"
+      "sha512": "sha512-YiqCw+PfiPIuX2aZnEqt1ya5ldGm4ParIqzaRXtztDu8mdzZxOXVYOrKZazXg6nbwYbCP1H5mOYGmBFQ2W0M5g==",
+      "path": "sqlitepclraw.provider.e_sqlite3/2.0.4",
+      "hashPath": "sqlitepclraw.provider.e_sqlite3.2.0.4.nupkg.sha512"
     },
     "Storm.Mvvm.Forms/2.5.0": {
       "type": "package",
