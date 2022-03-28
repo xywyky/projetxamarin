@@ -9,6 +9,7 @@ namespace TimeTracker.Apps.ViewModels
     {
 
         private string _text;
+        private string _description;
 
         public Projet(ICommand deleteCommand, ICommand editCommand)
         {
@@ -16,6 +17,12 @@ namespace TimeTracker.Apps.ViewModels
             EditCommand = editCommand;
         }
 
+
+        public string Description
+        {
+            get => _description;
+            set => SetProperty(ref _description, value);
+        }
 
         public string Text
         {

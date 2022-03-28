@@ -14,18 +14,6 @@
 		<dict>
 			<key>affected-items</key>
 			<array>
-				<string>./AppIcon.appiconset/[][ipad][76x76][][][2x][][][]</string>
-			</array>
-			<key>catalog</key>
-			<string>/Users/bernagaudtristan/Documents/M1/semestre 2/Developpement_multi_plateforme/TP/Xamarin/TP1/Cours-Xamarin/project/src/TimeTracker.Apps.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.2/actool/cloned-assets/Assets.xcassets</string>
-			<key>message</key>
-			<string>The file "Icon152.png" for the image set "AppIcon" does not exist.</string>
-			<key>type</key>
-			<string>Missing Content</string>
-		</dict>
-		<dict>
-			<key>affected-items</key>
-			<array>
 				<string>./AppIcon.appiconset/[][iphone][20x20][][][3x][][][]</string>
 			</array>
 			<key>catalog</key>
@@ -170,18 +158,6 @@
 		<dict>
 			<key>affected-items</key>
 			<array>
-				<string>./AppIcon.appiconset/[][iphone][20x20][][][2x][][][]</string>
-			</array>
-			<key>catalog</key>
-			<string>/Users/bernagaudtristan/Documents/M1/semestre 2/Developpement_multi_plateforme/TP/Xamarin/TP1/Cours-Xamarin/project/src/TimeTracker.Apps.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.2/actool/cloned-assets/Assets.xcassets</string>
-			<key>message</key>
-			<string>The file "Icon40.png" for the image set "AppIcon" does not exist.</string>
-			<key>type</key>
-			<string>Missing Content</string>
-		</dict>
-		<dict>
-			<key>affected-items</key>
-			<array>
 				<string>./AppIcon.appiconset/[][iphone][29x29][][][3x][][][]</string>
 			</array>
 			<key>catalog</key>
@@ -219,6 +195,30 @@
 			<key>affected-items</key>
 			<array>
 				<string>./AppIcon.appiconset/[][ipad][40x40][][][1x][][][]</string>
+			</array>
+			<key>catalog</key>
+			<string>/Users/bernagaudtristan/Documents/M1/semestre 2/Developpement_multi_plateforme/TP/Xamarin/TP1/Cours-Xamarin/project/src/TimeTracker.Apps.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.2/actool/cloned-assets/Assets.xcassets</string>
+			<key>message</key>
+			<string>The file "Icon40.png" for the image set "AppIcon" does not exist.</string>
+			<key>type</key>
+			<string>Missing Content</string>
+		</dict>
+		<dict>
+			<key>affected-items</key>
+			<array>
+				<string>./AppIcon.appiconset/[][ipad][76x76][][][2x][][][]</string>
+			</array>
+			<key>catalog</key>
+			<string>/Users/bernagaudtristan/Documents/M1/semestre 2/Developpement_multi_plateforme/TP/Xamarin/TP1/Cours-Xamarin/project/src/TimeTracker.Apps.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.2/actool/cloned-assets/Assets.xcassets</string>
+			<key>message</key>
+			<string>The file "Icon152.png" for the image set "AppIcon" does not exist.</string>
+			<key>type</key>
+			<string>Missing Content</string>
+		</dict>
+		<dict>
+			<key>affected-items</key>
+			<array>
+				<string>./AppIcon.appiconset/[][iphone][20x20][][][2x][][][]</string>
 			</array>
 			<key>catalog</key>
 			<string>/Users/bernagaudtristan/Documents/M1/semestre 2/Developpement_multi_plateforme/TP/Xamarin/TP1/Cours-Xamarin/project/src/TimeTracker.Apps.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.2/actool/cloned-assets/Assets.xcassets</string>

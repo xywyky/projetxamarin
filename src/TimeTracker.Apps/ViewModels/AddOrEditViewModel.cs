@@ -10,13 +10,20 @@ namespace TimeTracker.Apps.ViewModels
 {
     public class AddOrEditViewModel : ViewModelBase
     {
-        private string _text;
+        private string _name;
+        private string _description;
         private int _index;
 
-        public string Text
+        public string Description
         {
-            get => _text;
-            set => SetProperty(ref _text, value);
+            get => _description;
+            set => SetProperty(ref _description, value);
+        }
+
+        public string Name
+        {
+            get => _name;
+            set => SetProperty(ref _name, value);
         }
 
         [NavigationParameter]
@@ -41,7 +48,7 @@ namespace TimeTracker.Apps.ViewModels
             if (Index >= 0)
             {
                 var todoService = DependencyService.Get<ProjetService>();
-                Text = todoService.Projet[Index];
+                Name = todoService.Projet[Index];
             }
             return base.OnResume();
         }
@@ -53,25 +60,24 @@ namespace TimeTracker.Apps.ViewModels
 
         private async void ValidateAction()
         {
-            string text = Text;
-            if (string.IsNullOrEmpty(text))
+            string name = Name;
+            string description = Description;
+            if (string.IsNullOrEmpty(name))
             {
                 return;
             }
 
-            var todoService = DependencyService.Get<ProjetService>();
-            List<string> todos = todoService.Projet;
+            var todoService2 = DependencyService.Get<ApiService>();
             if (Index < 0)
             {
-                todos.Add(text);
+                todoService2.postProjects(name,description);
             }
             else
             {
-                todos[Index] = text;
             }
-            todoService.Save();
 
-            Text = "";
+            Name = "";
+            Description = "";
             await NavigationService.PopAsync();
         }
     }

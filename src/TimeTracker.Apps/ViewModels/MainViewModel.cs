@@ -1,10 +1,5 @@
+
 using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Net;
-using System.Net.Http;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 using Newtonsoft.Json;
 using Storm.Mvvm;
@@ -66,6 +61,7 @@ namespace TimeTracker.Apps.ViewModels
             }
             else
             {
+                todoService.getProjects();
                 NavigationService.PushAsync<ListProjet>();
             }
             

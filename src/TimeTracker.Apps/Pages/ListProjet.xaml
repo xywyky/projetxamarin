@@ -7,11 +7,15 @@
     x:Class="TimeTracker.Apps.Pages.ListProjet">
 
      <ContentPage.Resources>
-        <DataTemplate x:DataType="viewModels:Projet" x:Key="TodoTemplate">
+        <DataTemplate x:DataType="viewModels:Datum" x:Key="TodoTemplate">
             <ViewCell>
                 <StackLayout Orientation="Vertical" HorizontalOptions="StartAndExpand">
-                    <Label Text="{Binding Text}"
+                    <Label Text="{Binding Name}"
                            FontSize="32"
+                           LineBreakMode="WordWrap"
+                    />
+                    <Label Text="{Binding Description}"
+                           FontSize="18"
                            LineBreakMode="WordWrap"
                     />
                     <Grid ColumnDefinitions="*,*" >
@@ -38,20 +42,34 @@
         </DataTemplate>
     </ContentPage.Resources>
     
-    <Grid RowDefinitions="*, Auto" Margin="12,0,12,48">
-        <ListView ItemsSource="{Binding Projets}"
+    <Grid RowDefinitions="*, auto" Margin="12,0,12,48">
+        <ListView ItemsSource="{Binding Projets2}"
                   Grid.Row="0"
                   HasUnevenRows="True"
                   ItemTemplate="{StaticResource TodoTemplate}"
                   />
-        <Button Text="Ajouter"
+
+        <Grid ColumnDefinitions="*,*" Grid.Row="1">
+            <Button Text="Ajouter"
                 BackgroundColor="LightBlue"
-                CornerRadius="32"
-                HeightRequest="64"
-                Grid.Row="1"
+                CornerRadius="16"
+                HeightRequest="32"
+                    Grid.Column
+                    ="0"
                 HorizontalOptions="FillAndExpand"
                 Command="{Binding AddCommand}"
                 />
+        <Button Text="Edit profil"
+                BackgroundColor="LightBlue"
+                CornerRadius="16"
+                HeightRequest="32"
+                Grid.Column
+                    ="1"
+                HorizontalOptions="FillAndExpand"
+                Command="{Binding EditCommand}"
+                />
+
+            </Grid>
     </Grid>
 
 

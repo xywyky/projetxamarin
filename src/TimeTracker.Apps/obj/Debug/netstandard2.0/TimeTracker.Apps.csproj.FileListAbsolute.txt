@@ -14,3 +14,4 @@
 /Users/bernagaudtristan/Documents/M1/semestre 2/Developpement_multi_plateforme/TP/Xamarin/TP1/Cours-Xamarin/project/src/TimeTracker.Apps/obj/Debug/netstandard2.0/Pages/ListProjet.xaml.g.cs
 /Users/bernagaudtristan/Documents/M1/semestre 2/Developpement_multi_plateforme/TP/Xamarin/TP1/Cours-Xamarin/project/src/TimeTracker.Apps/obj/Debug/netstandard2.0/Pages/AddOrEdit.xaml.g.cs
 /Users/bernagaudtristan/Documents/M1/semestre 2/Developpement_multi_plateforme/TP/Xamarin/TP1/Cours-Xamarin/project/src/TimeTracker.Apps/obj/Debug/netstandard2.0/Pages/PageInscription.xaml.g.cs
+/Users/bernagaudtristan/Documents/M1/semestre 2/Developpement_multi_plateforme/TP/Xamarin/TP1/Cours-Xamarin/project/src/TimeTracker.Apps/obj/Debug/netstandard2.0/Pages/EditProfil.xaml.g.cs

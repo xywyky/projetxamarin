@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<forms:BaseContentPage
+ xmlns:forms="clr-namespace:Storm.Mvvm.Forms;assembly=Storm.Mvvm.Forms"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:converters="clr-namespace:TimeTracker.Apps.Converters"
+    x:Class="TimeTracker.Apps.Pages.EditProfil">
+
+        <StackLayout Orientation="Vertical">
+
+        <Label Text="Edit Porfil "
+               TextDecorations="Underline" 
+               FontSize = "50" />
+
+        <Entry Text="{Binding Email, Mode=TwoWay}"
+               HorizontalOptions="FillAndExpand"
+               HeightRequest="64"/>
+        <Entry Text="{Binding First_name, Mode=TwoWay}"
+               HorizontalOptions="FillAndExpand"
+               HeightRequest="64"
+               />
+        <Entry Text="{Binding Last_name, Mode=TwoWay}"
+               HorizontalOptions="FillAndExpand"
+               HeightRequest="64"
+                />
+
+         <Grid ColumnDefinitions="*,*" >
+
+
+                        <Button Grid.Column="0"
+                                Text="valider"
+                                BackgroundColor="LightBlue"
+                                CornerRadius="32"
+                                HeightRequest="64"
+                                Command="{Binding ChangeCommand}"
+                                CommandParameter="{Binding .}"
+                        />
+                        <Button Grid.Column="1"
+                                Text="Back"
+                                TextColor="White"
+                                BackgroundColor="DarkRed"
+                                CornerRadius="32"
+                                HeightRequest="64"
+                                Command="{Binding RetourCommand}"
+                                CommandParameter="{Binding .}"
+                        />
+        
+         </Grid>
+
+    </StackLayout>
+
+
+
+</forms:BaseContentPage>

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 using System.Windows.Input;
@@ -13,6 +14,14 @@ namespace TimeTracker.Apps.ViewModels
     {
         private ObservableCollection<Projet> _projet;
 
+        private ObservableCollection<Datum> _projet2;
+
+        public ObservableCollection<Datum> Projets2
+        {
+            get => _projet2;
+            set => SetProperty(ref _projet2, value);
+        }
+
         public ObservableCollection<Projet> Projets
         {
             get => _projet;
@@ -20,64 +29,72 @@ namespace TimeTracker.Apps.ViewModels
         }
 
         public ICommand AddCommand { get; }
+        public ICommand EditCommand { get; }
 
         public ListProjetViewModel()
         {
             Projets = new ObservableCollection<Projet>();
-
+            Projets2 = new ObservableCollection<Datum>();
 
             AddCommand = new Command(AddAction);
+            EditCommand = new Command(EditAction);
         }
 
+        private void EditAction()
+        {
+            NavigationService.PushAsync<EditProfil>();
+        }
+
+        //fonction a adapter
         public override Task OnResume()
         {
-            Projets.Clear();
-            List<string> items = DependencyService.Get<ProjetService>().Projet;
-            foreach (string item in items)
+            Projets2.Clear();
+            List<Datum> iems2 = DependencyService.Get<ApiService>().Projet;
+
+            foreach (Datum i in iems2)
             {
-                Projets.Add(Create(item));
+                Projets2.Add(Create(i));
             }
 
             return base.OnResume();
         }
 
-        private Projet Create(string text)
+    private Datum Create(Datum datum)
         {
-            return new Projet(
-                new Command<Projet>(DeleteAction),
-                new Command<Projet>(EditAction)
-            )
+            return new Datum(
+                    new Command<Datum>(DeleteAction))
             {
-                Text = text
-            };
+                Name = datum._name,
+                Description = datum._description,
+                Id = datum._id
+            }
+                ;
+
         }
 
-        private void EditAction(Projet projet)
+    private void EditAction(Projet projet)
+    {
+        int index = Projets.IndexOf(projet);
+
+        NavigationService.PushAsync<AddOrEdit>(new Dictionary<string, object>()
         {
-            int index = Projets.IndexOf(projet);
-
-            NavigationService.PushAsync<AddOrEdit>(new Dictionary<string, object>()
-            {
-                ["Index"] = index
-            });
-        }
-
-        private void DeleteAction(Projet projet)
-        {
-            int index = Projets.IndexOf(projet);
-            var todoService = DependencyService.Get<ProjetService>();
-            List<string> items = todoService.Projet;
-            items.RemoveAt(index);
-            Projets.RemoveAt(index);
-            todoService.Save();
-        }
-
-        private void AddAction()
-        {
-            NavigationService.PushAsync<AddOrEdit>(new Dictionary<string, object>()
-            {
-                ["Index"] = -1
-            });
-        }
+            ["Index"] = index
+        });
     }
+
+    private void DeleteAction(Datum projet)
+    {
+        int index = projet.Id;
+        var todoService = DependencyService.Get<ApiService>();
+        todoService.deleteProjects(index);
+    }
+
+    private void AddAction()
+    {
+            NavigationService.PushAsync<AddOrEdit>(new Dictionary<string, object>()
+        {
+            ["Index"] = -1
+        });
+    }
+}
 }

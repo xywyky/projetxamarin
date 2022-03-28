@@ -10,7 +10,11 @@
     </ContentPage.Resources>
     
     <StackLayout Margin="12,0,12,48">
-        <Entry Text="{Binding Text, Mode=TwoWay}"
+        <Entry Text="{Binding Name, Mode=TwoWay}"
+               HorizontalOptions="FillAndExpand"
+               HeightRequest="64"
+               />
+        <Entry Text="{Binding Description, Mode=TwoWay}"
                HorizontalOptions="FillAndExpand"
                HeightRequest="64"
                />
