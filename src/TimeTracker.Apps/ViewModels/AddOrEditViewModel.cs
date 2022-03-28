@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Storm.Mvvm;
@@ -47,10 +48,35 @@ namespace TimeTracker.Apps.ViewModels
         {
             if (Index >= 0)
             {
-                var todoService = DependencyService.Get<ProjetService>();
-                Name = todoService.Projet[Index];
+                List<Datum> todoService = DependencyService.Get<ApiService>().Projet;
+
+                foreach(Datum test in todoService)
+                {
+
+                    bool essei = testid(test);
+                    if (essei)
+                    {
+                        return base.OnResume();
+                    }
+
+                }
+                
+
+
             }
             return base.OnResume();
+        }
+
+        private bool testid(Datum test)
+        {
+            if (test.Id == Index)
+            {
+                Name = test.Name;
+                Description = test.Description;
+
+                return true;
+            }
+            return false;
         }
 
         private async void CancelAction()
@@ -70,10 +96,15 @@ namespace TimeTracker.Apps.ViewModels
             var todoService2 = DependencyService.Get<ApiService>();
             if (Index < 0)
             {
+                Console.WriteLine("noon");
                 todoService2.postProjects(name,description);
             }
             else
             {
+                Console.WriteLine(name);
+                Console.WriteLine(description);
+                Console.WriteLine(Index);
+                todoService2.putProjectAsync(name, description, Index);
             }
 
             Name = "";

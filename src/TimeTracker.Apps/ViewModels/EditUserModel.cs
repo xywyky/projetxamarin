@@ -44,9 +44,6 @@ namespace TimeTracker.Apps.ViewModels
             CreateAsync(profil);
 
 
-
-            Console.WriteLine("???????");
-
             return base.OnResume();
         }
 
