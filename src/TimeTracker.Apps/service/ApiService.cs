@@ -99,8 +99,7 @@ namespace TimeTracker.Apps.Services
             var bodystringresponse = await json2.Content.ReadAsStringAsync();
             var presqueproj = JsonConvert.DeserializeObject<Projet2>(bodystringresponse);
             Projet = presqueproj.data;
-
-
+            
         }
 
         public async void postProjects(string name, string description)
@@ -128,7 +127,7 @@ namespace TimeTracker.Apps.Services
         }
 
 
-        public async void getMe()
+        public async Task<Profil> getMe()
         {
             Console.WriteLine("oui");
             var test = await client.GetAsync("api/v1/me");
@@ -136,8 +135,8 @@ namespace TimeTracker.Apps.Services
             var bodystringresponse = await test.Content.ReadAsStringAsync();
             Console.WriteLine(bodystringresponse);
             ME = JsonConvert.DeserializeObject<Profil>(bodystringresponse);
-           
 
+            return ME;
         }
 
         public async Task<HttpResponseMessage> patchMe(string email, string last_name, string first_name)

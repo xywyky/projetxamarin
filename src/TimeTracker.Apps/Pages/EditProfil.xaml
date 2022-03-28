@@ -7,7 +7,7 @@
 
         <StackLayout Orientation="Vertical">
 
-        <Label Text="Edit Porfil "
+        <Label Text="Edit Profil "
                TextDecorations="Underline" 
                FontSize = "50" />
 

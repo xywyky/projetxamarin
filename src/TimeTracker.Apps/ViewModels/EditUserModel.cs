@@ -38,30 +38,27 @@ namespace TimeTracker.Apps.ViewModels
 
         public override Task OnResume()
         {
-            Console.WriteLine("???????");
-            var todoService = DependencyService.Get<ApiService>();
-
-            todoService.getMe();
-            var test = DependencyService.Get<ApiService>().ME;
-
-            Email = "test";
-
-            if (test.data.last_name != null)
-            {
-                string test2 = todoService.ME.data.last_name;
-
-                Last_name = test2;
-            }
-            else
-            {
-                Console.WriteLine("uwu");
-            }
             
+            Profil profil  = DependencyService.Get<ApiService>().ME;
+            CreateAsync(profil);
+
 
 
             Console.WriteLine("???????");
 
             return base.OnResume();
+        }
+
+        private async Task CreateAsync(Profil profil)
+        {
+            var todoService = DependencyService.Get<ApiService>();
+
+            var response = await todoService.getMe();
+
+            Email = response.data.email;
+            Last_name = response.data.last_name;
+            First_name = response.data.first_name;
+
         }
 
         public EditUserModel()
