@@ -62,7 +62,8 @@ namespace TimeTracker.Apps.ViewModels
     private Datum Create(Datum datum)
         {
             return new Datum(
-                    new Command<Datum>(DeleteAction))
+                    new Command<Datum>(DeleteAction),
+                    new Command<Datum>(ModifAction))
             {
                 Name = datum._name,
                 Description = datum._description,
@@ -72,15 +73,13 @@ namespace TimeTracker.Apps.ViewModels
 
         }
 
-    private void EditAction(Projet projet)
+    private void ModifAction(Datum datum)
     {
-        int index = Projets.IndexOf(projet);
-
-        NavigationService.PushAsync<AddOrEdit>(new Dictionary<string, object>()
-        {
-            ["Index"] = index
-        });
-    }
+            NavigationService.PushAsync<AddOrEdit>(new Dictionary<string, object>()
+            {
+                ["Index"] = datum.Id
+            });
+        }
 
     private void DeleteAction(Datum projet)
     {

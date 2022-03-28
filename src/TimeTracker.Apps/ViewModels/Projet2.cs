@@ -14,9 +14,10 @@ namespace TimeTracker.Apps.ViewModels
         public string _description;
         public int _total_seconds;
 
-        public Datum(ICommand deleteCommand)
+        public Datum(ICommand deleteCommand, ICommand modifCommand)
         {
             DeleteCommand = deleteCommand;
+            ModifCommand = modifCommand;
         }
 
         public int Id
@@ -39,7 +40,7 @@ namespace TimeTracker.Apps.ViewModels
 
         public ICommand DeleteCommand { get; }
 
-        public ICommand EditCommand { get; }
+        public ICommand ModifCommand { get; }
 
 
     }

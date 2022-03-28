@@ -187,6 +187,22 @@ namespace TimeTracker.Apps.Services
 
         }
 
+        public async Task putProjectAsync(string name, string desc,int id)
+        {
+            var values = new Dictionary<string, string>
+            {
+                { "name", name },
+                { "description", desc}
+
+            };
+
+            var json = JsonConvert.SerializeObject(values);
+            var content =
+                new StringContent(json, Encoding.UTF8, "application/json");
+            await client.PutAsync("api/v1/projects/"+id,content);
+
+        }
+
 
     }
 }
