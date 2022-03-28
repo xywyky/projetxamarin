@@ -52,7 +52,11 @@ namespace TimeTracker.Apps.ViewModels
 
         private async void ConnectionPageAction()
         {
-            await NavigationService.PushAsync<MainPage>();
+            First_name = "";
+            Last_name = "";
+            Email = "";
+            Pass = "";
+            await NavigationService.PopAsync();
         }
 
 
@@ -76,7 +80,11 @@ namespace TimeTracker.Apps.ViewModels
             }
             else
             {
-                NavigationService.PushAsync<MainPage>();
+                First_name = "";
+                Last_name = "";
+                Email = "";
+                Pass = "";
+                await NavigationService.PopAsync();
             }
 
 

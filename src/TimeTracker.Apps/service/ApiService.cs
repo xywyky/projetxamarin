@@ -25,6 +25,8 @@ namespace TimeTracker.Apps.Services
 
         public List<Datum> Projet;
 
+        //public List<Tassk> Tasks;
+
         public ApiService()
         {
            client = new HttpClient()
@@ -118,6 +120,7 @@ namespace TimeTracker.Apps.Services
             Console.WriteLine(response);
         }
 
+        //peut etre mettre un await mais d'autre truc a changer apres je pense 
         public void deleteProjects(int id)
         {
             Console.WriteLine("ho");
@@ -202,7 +205,105 @@ namespace TimeTracker.Apps.Services
             await client.PutAsync("api/v1/projects/"+id,content);
 
         }
+        //a addapter par rapport au truc de guigui
+        /*public async void getTasks(int idProject)
+        {
+            var json2 = await client.GetAsync("api/v1/projects/"+idProject+"/tasks");
+            var bodystringresponse = await json2.Content.ReadAsStringAsync();
+            var presqueproj = JsonConvert.DeserializeObject<Tassk>(bodystringresponse);
+            Tasks = presqueproj.data;
 
+        }*/
+
+        public async Task postTaskAsync(int idProject, string name)
+        {
+            var values = new Dictionary<string, string>
+            {
+                { "name", name }
+
+            };
+            var json = JsonConvert.SerializeObject(values);
+            var content =
+                new StringContent(json, Encoding.UTF8, "application/json");
+
+            await client.PostAsync("api/v1/projects/" + idProject + "/tasks",content);
+        }
+
+        public async Task putTaskAsync(int idProject,string name, int idTask)
+        {
+            var values = new Dictionary<string, string>
+            {
+                { "name", name }
+            };
+            var json = JsonConvert.SerializeObject(values);
+            var content =
+                new StringContent(json, Encoding.UTF8, "application/json");
+
+            await client.PutAsync("api/v1/projects/" + idProject + "/tasks"+idTask, content);
+
+        }
+
+        public async Task deleteTaskAsync(int idProject, int idTask)
+        {
+            await client.DeleteAsync("api/v1/projects/" + idProject + "/tasks" + idTask);
+        }
+
+        public async Task postTimeAsync(int idProject, int idTask, string start_time, string end_time)
+        {
+            var values = new Dictionary<string, string>
+            {
+                { "end_time", end_time },
+                { "start_time", start_time}
+            };
+            var json = JsonConvert.SerializeObject(values);
+            var content =
+                new StringContent(json, Encoding.UTF8, "application/json");
+
+            await client.PostAsync("api/v1/projects/" + idProject + "/tasks" + idTask+"times", content);
+        }
+
+        public async Task putTimeAsync(int idProject, int idTask, int idTime, string start_time, string end_time)
+        {
+            var values = new Dictionary<string, string>
+            {
+                { "end_time", end_time },
+                { "start_time", start_time}
+            };
+            var json = JsonConvert.SerializeObject(values);
+            var content =
+                new StringContent(json, Encoding.UTF8, "application/json");
+
+            await client.PutAsync("api/v1/projects/" + idProject + "/tasks" + idTask + "times"+idTime, content);
+
+        }
+
+        public async Task deleteTimeAsync(int idProject, int idTask, int idTime)
+        {
+            await client.DeleteAsync("api/v1/projects/" + idProject + "/tasks" + idTask + "times" + idTime);
+
+        }
+
+        public async Task refreshAsync()
+        {
+            var values = new Dictionary<string, string>
+            {
+                { "refresh_token", token.data.refresh_token },
+                { "client_id", "MOBILE"},
+                { "client_secret", "COURS"}
+            };
+            var json = JsonConvert.SerializeObject(values);
+            var content =
+                new StringContent(json, Encoding.UTF8, "application/json");
+           var response =  await client.PostAsync("api/v1/refresh",content);
+
+            var bodystringresponse = await response.Content.ReadAsStringAsync();
+            token = JsonConvert.DeserializeObject<Token>(bodystringresponse);
+
+            var contentType = new MediaTypeWithQualityHeaderValue("application/json");
+            client.DefaultRequestHeaders.Accept.Add(contentType);
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token.data.access_token);
+
+        }
 
     }
 }
