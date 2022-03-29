@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using Storm.Mvvm;
 using Storm.Mvvm.Navigation;
+using TimeTracker.Apps.Pages;
 using TimeTracker.Apps.Services;
 using Xamarin.Forms;
 
@@ -60,9 +61,6 @@ namespace TimeTracker.Apps.ViewModels
                     }
 
                 }
-                
-
-
             }
             return base.OnResume();
         }
@@ -96,19 +94,16 @@ namespace TimeTracker.Apps.ViewModels
             var todoService2 = DependencyService.Get<ApiService>();
             if (Index < 0)
             {
-                Console.WriteLine("noon");
                 todoService2.postProjects(name,description);
             }
             else
             {
-                Console.WriteLine(name);
-                Console.WriteLine(description);
-                Console.WriteLine(Index);
                 todoService2.putProjectAsync(name, description, Index);
             }
 
             Name = "";
             Description = "";
+            todoService2.getProjects();
             await NavigationService.PopAsync();
         }
     }

@@ -89,7 +89,8 @@ namespace TimeTracker.Apps.ViewModels
         int index = projet.Id;
         var todoService = DependencyService.Get<ApiService>();
         todoService.deleteProjects(index);
-    }
+        todoService.getProjects();
+        }
 
     private void AddAction()
     {

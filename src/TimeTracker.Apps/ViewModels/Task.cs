@@ -12,6 +12,9 @@ namespace TimeTracker.Apps.ViewModels
         public string _name;
         public List<Time> _temps;
 
+        public ICommand DeleteCommand { get; }
+        public ICommand ModifCommand { get; }
+
         public int Id
         {
             get => _id;
@@ -28,6 +31,12 @@ namespace TimeTracker.Apps.ViewModels
         {
             get => _temps;
             set => SetProperty(ref _temps, value);
+        }
+
+        public Tassk(ICommand deleteCommand, ICommand modifCommand)
+        {
+            DeleteCommand = deleteCommand;
+            ModifCommand = modifCommand;
         }
 
     }
