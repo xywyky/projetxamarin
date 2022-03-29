@@ -38,7 +38,9 @@ namespace TimeTracker.Apps.ViewModels
 
         private async void RetourActionAsync()
         {
-            await NavigationService.PushAsync<EditProfil>();
+            Old_password = "";
+            New_password = "";
+            await NavigationService.PopAsync();
         }
 
         private async void ChangeActionAsync(object obj)
@@ -50,7 +52,9 @@ namespace TimeTracker.Apps.ViewModels
 
             todoService.patchpasswordAsync(OP, NP);
 
-            await NavigationService.PushAsync<EditProfil>();
+            Old_password = "";
+            New_password = "";
+            await NavigationService.PopAsync();
         }
     }
 }

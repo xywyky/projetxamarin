@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<forms:BaseContentPage
+            xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:forms="clr-namespace:Storm.Mvvm.Forms;assembly=Storm.Mvvm.Forms"
+             xmlns:converters="clr-namespace:TimeTracker.Apps.Converters;assembly=TimeTracker.Apps"
+             x:Class="TimeTracker.Apps.Pages.AddOrEditTask">
+    <ContentPage.Resources>
+        <converters:AddOrEditConverter x:Key="AddOrEditTextConverter" />
+    </ContentPage.Resources>
+    
+    <StackLayout Margin="12,0,12,48">
+        <Entry Text="{Binding Name, Mode=TwoWay}"
+               HorizontalOptions="FillAndExpand"
+               HeightRequest="64"
+               />
+        <Button Text="{Binding Index, Converter={StaticResource AddOrEditTextConverter}}"
+                BackgroundColor="LightGreen"
+                CornerRadius="32"
+                HeightRequest="64"
+                Command="{Binding ValidateCommand}"
+        />
+        <Button Text="Annuler"
+                TextColor="White"
+                BackgroundColor="DarkRed"
+                CornerRadius="32"
+                HeightRequest="64"
+                Command="{Binding CancelCommand}"
+        />
+        
+    </StackLayout>
+</forms:BaseContentPage>

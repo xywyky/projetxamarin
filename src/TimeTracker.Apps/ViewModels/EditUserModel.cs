@@ -74,7 +74,10 @@ namespace TimeTracker.Apps.ViewModels
 
         private async void RetourActionAsync()
         {
-            await NavigationService.PushAsync<ListProjet>();
+            First_name = "";
+            Last_name = "";
+            Email = "";
+            await NavigationService.PopAsync();
         }
 
         private async void ChangeActionAsync()
@@ -87,7 +90,10 @@ namespace TimeTracker.Apps.ViewModels
             
             todoService.patchMe(email, LN, FN);
 
-            await NavigationService.PushAsync<ListProjet>();
+            First_name = "";
+            Last_name = "";
+            Email = "";
+            await NavigationService.PopAsync();
         }
     }
 }

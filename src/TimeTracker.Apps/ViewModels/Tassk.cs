@@ -10,12 +10,8 @@ namespace TimeTracker.Apps.ViewModels
     {
         public int _id;
         public string _name;
-        public Time _temps;
+        public List<Time> _temps;
 
-        public Tassk(ICommand deleteCommand)
-        {
-            DeleteCommand = deleteCommand;
-        }
         public int Id
         {
             get => _id;
@@ -28,14 +24,19 @@ namespace TimeTracker.Apps.ViewModels
             set => SetProperty(ref _name, value);
         }
 
-        public Time Temps
+        public List<Time> Temps
         {
             get => _temps;
             set => SetProperty(ref _temps, value);
         }
 
-        public ICommand DeleteCommand { get; }
+    }
 
-        public ICommand EditCommand { get; }
+    public class Root
+    {
+        public List<Tassk> data { get; set; }
+        public bool is_success { get; set; }
+        public string error_code { get; set; }
+        public string error_message { get; set; }
     }
 }

@@ -242,26 +242,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\neos8\\.nuget\\packages\\": {}
+    "/Users/bernagaudtristan/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\neos8\\Source\\Repos\\projet_xamarin\\src\\TimeTracker.Dtos\\TimeTracker.Dtos.csproj",
+      "projectUniqueName": "/Users/bernagaudtristan/Documents/M1/semestre 2/Developpement_multi_plateforme/TP/Xamarin/TP1/Cours-Xamarin/project/src/TimeTracker.Dtos/TimeTracker.Dtos.csproj",
       "projectName": "TimeTracker.Dtos",
-      "projectPath": "C:\\Users\\neos8\\Source\\Repos\\projet_xamarin\\src\\TimeTracker.Dtos\\TimeTracker.Dtos.csproj",
-      "packagesPath": "C:\\Users\\neos8\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\neos8\\Source\\Repos\\projet_xamarin\\src\\TimeTracker.Dtos\\obj\\",
+      "projectPath": "/Users/bernagaudtristan/Documents/M1/semestre 2/Developpement_multi_plateforme/TP/Xamarin/TP1/Cours-Xamarin/project/src/TimeTracker.Dtos/TimeTracker.Dtos.csproj",
+      "packagesPath": "/Users/bernagaudtristan/.nuget/packages/",
+      "outputPath": "/Users/bernagaudtristan/Documents/M1/semestre 2/Developpement_multi_plateforme/TP/Xamarin/TP1/Cours-Xamarin/project/src/TimeTracker.Dtos/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\neos8\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/bernagaudtristan/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -301,7 +299,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.404/RuntimeIdentifierGraph.json"
       }
     }
   }
