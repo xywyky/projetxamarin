@@ -33,11 +33,14 @@
           "lib/xamarinios1.0/Microcharts.iOS.dll": {}
         }
       },
-      "MonkeyCache/1.5.2": {
+      "MonkeyCache/1.6.2": {
         "type": "package",
         "dependencies": {
-          "Newtonsoft.Json": "12.0.3"
+          "Newtonsoft.Json": "13.0.1"
         },
+        "frameworkAssemblies": [
+          "System.Drawing.Common.dll"
+        ],
         "compile": {
           "lib/xamarinios10/MonkeyCache.dll": {}
         },
@@ -45,13 +48,16 @@
           "lib/xamarinios10/MonkeyCache.dll": {}
         }
       },
-      "MonkeyCache.SQLite/1.5.2": {
+      "MonkeyCache.SQLite/1.6.2": {
         "type": "package",
         "dependencies": {
-          "MonkeyCache": "1.5.2",
-          "Newtonsoft.Json": "12.0.3",
-          "sqlite-net-pcl": "1.7.335"
+          "MonkeyCache": "1.6.2",
+          "Newtonsoft.Json": "13.0.1",
+          "sqlite-net-pcl": "1.8.116"
         },
+        "frameworkAssemblies": [
+          "System.Drawing.Common.dll"
+        ],
         "compile": {
           "lib/xamarinios10/MonkeyCache.SQLite.dll": {}
         },
@@ -124,10 +130,10 @@
           "lib/xamarinios1.0/SkiaSharp.Views.Forms.dll": {}
         }
       },
-      "sqlite-net-pcl/1.7.335": {
+      "sqlite-net-pcl/1.8.116": {
         "type": "package",
         "dependencies": {
-          "SQLitePCLRaw.bundle_green": "2.0.3"
+          "SQLitePCLRaw.bundle_green": "2.0.4"
         },
         "compile": {
           "lib/netstandard2.0/SQLite-net.dll": {}
@@ -136,11 +142,11 @@
           "lib/netstandard2.0/SQLite-net.dll": {}
         }
       },
-      "SQLitePCLRaw.bundle_green/2.0.3": {
+      "SQLitePCLRaw.bundle_green/2.0.4": {
         "type": "package",
         "dependencies": {
-          "SQLitePCLRaw.core": "2.0.3",
-          "SQLitePCLRaw.provider.dynamic_cdecl": "2.0.3"
+          "SQLitePCLRaw.core": "2.0.4",
+          "SQLitePCLRaw.provider.dynamic_cdecl": "2.0.4"
         },
         "compile": {
           "lib/Xamarin.iOS10/SQLitePCLRaw.batteries_v2.dll": {},
@@ -151,7 +157,7 @@
           "lib/Xamarin.iOS10/SQLitePCLRaw.nativelibrary.dll": {}
         }
       },
-      "SQLitePCLRaw.core/2.0.3": {
+      "SQLitePCLRaw.core/2.0.4": {
         "type": "package",
         "dependencies": {
           "System.Memory": "4.5.3"
@@ -163,10 +169,10 @@
           "lib/netstandard2.0/SQLitePCLRaw.core.dll": {}
         }
       },
-      "SQLitePCLRaw.provider.dynamic_cdecl/2.0.3": {
+      "SQLitePCLRaw.provider.dynamic_cdecl/2.0.4": {
         "type": "package",
         "dependencies": {
-          "SQLitePCLRaw.core": "2.0.3"
+          "SQLitePCLRaw.core": "2.0.4"
         },
         "compile": {
           "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
@@ -381,7 +387,7 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Microcharts.Forms": "1.0.0-preview1",
-          "MonkeyCache.SQLite": "1.5.2",
+          "MonkeyCache.SQLite": "1.6.2",
           "Newtonsoft.Json": "13.0.1",
           "SkiaSharp.Views.Forms": "2.80.3",
           "Storm.Mvvm.Forms": "2.5.0",
@@ -428,11 +434,14 @@
           "lib/xamarinios1.0/Microcharts.iOS.dll": {}
         }
       },
-      "MonkeyCache/1.5.2": {
+      "MonkeyCache/1.6.2": {
         "type": "package",
         "dependencies": {
-          "Newtonsoft.Json": "12.0.3"
+          "Newtonsoft.Json": "13.0.1"
         },
+        "frameworkAssemblies": [
+          "System.Drawing.Common.dll"
+        ],
         "compile": {
           "lib/xamarinios10/MonkeyCache.dll": {}
         },
@@ -440,13 +449,16 @@
           "lib/xamarinios10/MonkeyCache.dll": {}
         }
       },
-      "MonkeyCache.SQLite/1.5.2": {
+      "MonkeyCache.SQLite/1.6.2": {
         "type": "package",
         "dependencies": {
-          "MonkeyCache": "1.5.2",
-          "Newtonsoft.Json": "12.0.3",
-          "sqlite-net-pcl": "1.7.335"
+          "MonkeyCache": "1.6.2",
+          "Newtonsoft.Json": "13.0.1",
+          "sqlite-net-pcl": "1.8.116"
         },
+        "frameworkAssemblies": [
+          "System.Drawing.Common.dll"
+        ],
         "compile": {
           "lib/xamarinios10/MonkeyCache.SQLite.dll": {}
         },
@@ -501,10 +513,10 @@
           "lib/xamarinios1.0/SkiaSharp.Views.Forms.dll": {}
         }
       },
-      "sqlite-net-pcl/1.7.335": {
+      "sqlite-net-pcl/1.8.116": {
         "type": "package",
         "dependencies": {
-          "SQLitePCLRaw.bundle_green": "2.0.3"
+          "SQLitePCLRaw.bundle_green": "2.0.4"
         },
         "compile": {
           "lib/netstandard2.0/SQLite-net.dll": {}
@@ -513,11 +525,11 @@
           "lib/netstandard2.0/SQLite-net.dll": {}
         }
       },
-      "SQLitePCLRaw.bundle_green/2.0.3": {
+      "SQLitePCLRaw.bundle_green/2.0.4": {
         "type": "package",
         "dependencies": {
-          "SQLitePCLRaw.core": "2.0.3",
-          "SQLitePCLRaw.provider.dynamic_cdecl": "2.0.3"
+          "SQLitePCLRaw.core": "2.0.4",
+          "SQLitePCLRaw.provider.dynamic_cdecl": "2.0.4"
         },
         "compile": {
           "lib/Xamarin.iOS10/SQLitePCLRaw.batteries_v2.dll": {},
@@ -528,7 +540,7 @@
           "lib/Xamarin.iOS10/SQLitePCLRaw.nativelibrary.dll": {}
         }
       },
-      "SQLitePCLRaw.core/2.0.3": {
+      "SQLitePCLRaw.core/2.0.4": {
         "type": "package",
         "dependencies": {
           "System.Memory": "4.5.3"
@@ -540,10 +552,10 @@
           "lib/netstandard2.0/SQLitePCLRaw.core.dll": {}
         }
       },
-      "SQLitePCLRaw.provider.dynamic_cdecl/2.0.3": {
+      "SQLitePCLRaw.provider.dynamic_cdecl/2.0.4": {
         "type": "package",
         "dependencies": {
-          "SQLitePCLRaw.core": "2.0.3"
+          "SQLitePCLRaw.core": "2.0.4"
         },
         "compile": {
           "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
@@ -758,7 +770,7 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Microcharts.Forms": "1.0.0-preview1",
-          "MonkeyCache.SQLite": "1.5.2",
+          "MonkeyCache.SQLite": "1.6.2",
           "Newtonsoft.Json": "13.0.1",
           "SkiaSharp.Views.Forms": "2.80.3",
           "Storm.Mvvm.Forms": "2.5.0",
@@ -805,11 +817,14 @@
           "lib/xamarinios1.0/Microcharts.iOS.dll": {}
         }
       },
-      "MonkeyCache/1.5.2": {
+      "MonkeyCache/1.6.2": {
         "type": "package",
         "dependencies": {
-          "Newtonsoft.Json": "12.0.3"
+          "Newtonsoft.Json": "13.0.1"
         },
+        "frameworkAssemblies": [
+          "System.Drawing.Common.dll"
+        ],
         "compile": {
           "lib/xamarinios10/MonkeyCache.dll": {}
         },
@@ -817,13 +832,16 @@
           "lib/xamarinios10/MonkeyCache.dll": {}
         }
       },
-      "MonkeyCache.SQLite/1.5.2": {
+      "MonkeyCache.SQLite/1.6.2": {
         "type": "package",
         "dependencies": {
-          "MonkeyCache": "1.5.2",
-          "Newtonsoft.Json": "12.0.3",
-          "sqlite-net-pcl": "1.7.335"
+          "MonkeyCache": "1.6.2",
+          "Newtonsoft.Json": "13.0.1",
+          "sqlite-net-pcl": "1.8.116"
         },
+        "frameworkAssemblies": [
+          "System.Drawing.Common.dll"
+        ],
         "compile": {
           "lib/xamarinios10/MonkeyCache.SQLite.dll": {}
         },
@@ -881,10 +899,10 @@
           "lib/xamarinios1.0/SkiaSharp.Views.Forms.dll": {}
         }
       },
-      "sqlite-net-pcl/1.7.335": {
+      "sqlite-net-pcl/1.8.116": {
         "type": "package",
         "dependencies": {
-          "SQLitePCLRaw.bundle_green": "2.0.3"
+          "SQLitePCLRaw.bundle_green": "2.0.4"
         },
         "compile": {
           "lib/netstandard2.0/SQLite-net.dll": {}
@@ -893,11 +911,11 @@
           "lib/netstandard2.0/SQLite-net.dll": {}
         }
       },
-      "SQLitePCLRaw.bundle_green/2.0.3": {
+      "SQLitePCLRaw.bundle_green/2.0.4": {
         "type": "package",
         "dependencies": {
-          "SQLitePCLRaw.core": "2.0.3",
-          "SQLitePCLRaw.provider.dynamic_cdecl": "2.0.3"
+          "SQLitePCLRaw.core": "2.0.4",
+          "SQLitePCLRaw.provider.dynamic_cdecl": "2.0.4"
         },
         "compile": {
           "lib/Xamarin.iOS10/SQLitePCLRaw.batteries_v2.dll": {},
@@ -908,7 +926,7 @@
           "lib/Xamarin.iOS10/SQLitePCLRaw.nativelibrary.dll": {}
         }
       },
-      "SQLitePCLRaw.core/2.0.3": {
+      "SQLitePCLRaw.core/2.0.4": {
         "type": "package",
         "dependencies": {
           "System.Memory": "4.5.3"
@@ -920,10 +938,10 @@
           "lib/netstandard2.0/SQLitePCLRaw.core.dll": {}
         }
       },
-      "SQLitePCLRaw.provider.dynamic_cdecl/2.0.3": {
+      "SQLitePCLRaw.provider.dynamic_cdecl/2.0.4": {
         "type": "package",
         "dependencies": {
-          "SQLitePCLRaw.core": "2.0.3"
+          "SQLitePCLRaw.core": "2.0.4"
         },
         "compile": {
           "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
@@ -1138,7 +1156,7 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Microcharts.Forms": "1.0.0-preview1",
-          "MonkeyCache.SQLite": "1.5.2",
+          "MonkeyCache.SQLite": "1.6.2",
           "Newtonsoft.Json": "13.0.1",
           "SkiaSharp.Views.Forms": "2.80.3",
           "Storm.Mvvm.Forms": "2.5.0",
@@ -1185,11 +1203,14 @@
           "lib/xamarinios1.0/Microcharts.iOS.dll": {}
         }
       },
-      "MonkeyCache/1.5.2": {
+      "MonkeyCache/1.6.2": {
         "type": "package",
         "dependencies": {
-          "Newtonsoft.Json": "12.0.3"
+          "Newtonsoft.Json": "13.0.1"
         },
+        "frameworkAssemblies": [
+          "System.Drawing.Common.dll"
+        ],
         "compile": {
           "lib/xamarinios10/MonkeyCache.dll": {}
         },
@@ -1197,13 +1218,16 @@
           "lib/xamarinios10/MonkeyCache.dll": {}
         }
       },
-      "MonkeyCache.SQLite/1.5.2": {
+      "MonkeyCache.SQLite/1.6.2": {
         "type": "package",
         "dependencies": {
-          "MonkeyCache": "1.5.2",
-          "Newtonsoft.Json": "12.0.3",
-          "sqlite-net-pcl": "1.7.335"
+          "MonkeyCache": "1.6.2",
+          "Newtonsoft.Json": "13.0.1",
+          "sqlite-net-pcl": "1.8.116"
         },
+        "frameworkAssemblies": [
+          "System.Drawing.Common.dll"
+        ],
         "compile": {
           "lib/xamarinios10/MonkeyCache.SQLite.dll": {}
         },
@@ -1261,10 +1285,10 @@
           "lib/xamarinios1.0/SkiaSharp.Views.Forms.dll": {}
         }
       },
-      "sqlite-net-pcl/1.7.335": {
+      "sqlite-net-pcl/1.8.116": {
         "type": "package",
         "dependencies": {
-          "SQLitePCLRaw.bundle_green": "2.0.3"
+          "SQLitePCLRaw.bundle_green": "2.0.4"
         },
         "compile": {
           "lib/netstandard2.0/SQLite-net.dll": {}
@@ -1273,11 +1297,11 @@
           "lib/netstandard2.0/SQLite-net.dll": {}
         }
       },
-      "SQLitePCLRaw.bundle_green/2.0.3": {
+      "SQLitePCLRaw.bundle_green/2.0.4": {
         "type": "package",
         "dependencies": {
-          "SQLitePCLRaw.core": "2.0.3",
-          "SQLitePCLRaw.provider.dynamic_cdecl": "2.0.3"
+          "SQLitePCLRaw.core": "2.0.4",
+          "SQLitePCLRaw.provider.dynamic_cdecl": "2.0.4"
         },
         "compile": {
           "lib/Xamarin.iOS10/SQLitePCLRaw.batteries_v2.dll": {},
@@ -1288,7 +1312,7 @@
           "lib/Xamarin.iOS10/SQLitePCLRaw.nativelibrary.dll": {}
         }
       },
-      "SQLitePCLRaw.core/2.0.3": {
+      "SQLitePCLRaw.core/2.0.4": {
         "type": "package",
         "dependencies": {
           "System.Memory": "4.5.3"
@@ -1300,10 +1324,10 @@
           "lib/netstandard2.0/SQLitePCLRaw.core.dll": {}
         }
       },
-      "SQLitePCLRaw.provider.dynamic_cdecl/2.0.3": {
+      "SQLitePCLRaw.provider.dynamic_cdecl/2.0.4": {
         "type": "package",
         "dependencies": {
-          "SQLitePCLRaw.core": "2.0.3"
+          "SQLitePCLRaw.core": "2.0.4"
         },
         "compile": {
           "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
@@ -1518,7 +1542,7 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Microcharts.Forms": "1.0.0-preview1",
-          "MonkeyCache.SQLite": "1.5.2",
+          "MonkeyCache.SQLite": "1.6.2",
           "Newtonsoft.Json": "13.0.1",
           "SkiaSharp.Views.Forms": "2.80.3",
           "Storm.Mvvm.Forms": "2.5.0",
@@ -1561,25 +1585,31 @@
         "microcharts.ios.nuspec"
       ]
     },
-    "MonkeyCache/1.5.2": {
-      "sha512": "RdR4LyW7MemYfnQ1nNMfL7xZZFFKHUdF2TG7rd/sYDBQNcJ4sFSPK3YdaJleEKXGpova01cqdttFbXN+fE+FQg==",
+    "MonkeyCache/1.6.2": {
+      "sha512": "AqHXynETkL6uwhDOccFrfpuMYPnIyyVETmxLj2PXjmTMoEUmUu8JrMEVnL35QcRo74jP2cI5hxDDpOIbiO95aw==",
       "type": "package",
-      "path": "monkeycache/1.5.2",
+      "path": "monkeycache/1.6.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/monoandroid71/MonkeyCache.dll",
-        "lib/monoandroid71/MonkeyCache.pdb",
-        "lib/monoandroid71/MonkeyCache.xml",
-        "lib/monoandroid80/MonkeyCache.dll",
-        "lib/monoandroid80/MonkeyCache.pdb",
-        "lib/monoandroid80/MonkeyCache.xml",
-        "lib/monoandroid81/MonkeyCache.dll",
-        "lib/monoandroid81/MonkeyCache.pdb",
-        "lib/monoandroid81/MonkeyCache.xml",
-        "lib/monoandroid90/MonkeyCache.dll",
-        "lib/monoandroid90/MonkeyCache.pdb",
-        "lib/monoandroid90/MonkeyCache.xml",
+        "lib/monoandroid10.0/MonkeyCache.dll",
+        "lib/monoandroid10.0/MonkeyCache.pdb",
+        "lib/monoandroid10.0/MonkeyCache.xml",
+        "lib/net461/MonkeyCache.dll",
+        "lib/net461/MonkeyCache.pdb",
+        "lib/net461/MonkeyCache.xml",
+        "lib/net6.0-android31.0/MonkeyCache.dll",
+        "lib/net6.0-android31.0/MonkeyCache.pdb",
+        "lib/net6.0-android31.0/MonkeyCache.xml",
+        "lib/net6.0-ios15.2/MonkeyCache.dll",
+        "lib/net6.0-ios15.2/MonkeyCache.pdb",
+        "lib/net6.0-ios15.2/MonkeyCache.xml",
+        "lib/net6.0-maccatalyst15.2/MonkeyCache.dll",
+        "lib/net6.0-maccatalyst15.2/MonkeyCache.pdb",
+        "lib/net6.0-maccatalyst15.2/MonkeyCache.xml",
+        "lib/net6.0-windows10.0.19041/MonkeyCache.dll",
+        "lib/net6.0-windows10.0.19041/MonkeyCache.pdb",
+        "lib/net6.0-windows10.0.19041/MonkeyCache.xml",
         "lib/netstandard2.0/MonkeyCache.dll",
         "lib/netstandard2.0/MonkeyCache.pdb",
         "lib/netstandard2.0/MonkeyCache.xml",
@@ -1596,32 +1626,35 @@
         "lib/xamarintvos10/MonkeyCache.dll",
         "lib/xamarintvos10/MonkeyCache.pdb",
         "lib/xamarintvos10/MonkeyCache.xml",
-        "lib/xamarinwatchos10/MonkeyCache.dll",
-        "lib/xamarinwatchos10/MonkeyCache.pdb",
-        "lib/xamarinwatchos10/MonkeyCache.xml",
-        "monkeycache.1.5.2.nupkg.sha512",
+        "monkeycache.1.6.2.nupkg.sha512",
         "monkeycache.nuspec"
       ]
     },
-    "MonkeyCache.SQLite/1.5.2": {
-      "sha512": "48RnppmExzM2dDEyhplXicb5vF2B2qkEcutzT5kERuoAjnXTMckdy7Nq+PuhANWQv5dOOhndLZ/sq2W75ODqOA==",
+    "MonkeyCache.SQLite/1.6.2": {
+      "sha512": "cUao8JD332xck3bGEvlA1sRgMWvySinuuWjoDChA0ZNIUNbaprC2vvLG4l+p3UVr9c+eEtSS1B37zbIAUfVm0Q==",
       "type": "package",
-      "path": "monkeycache.sqlite/1.5.2",
+      "path": "monkeycache.sqlite/1.6.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/monoandroid71/MonkeyCache.SQLite.dll",
-        "lib/monoandroid71/MonkeyCache.SQLite.pdb",
-        "lib/monoandroid71/MonkeyCache.SQLite.xml",
-        "lib/monoandroid80/MonkeyCache.SQLite.dll",
-        "lib/monoandroid80/MonkeyCache.SQLite.pdb",
-        "lib/monoandroid80/MonkeyCache.SQLite.xml",
-        "lib/monoandroid81/MonkeyCache.SQLite.dll",
-        "lib/monoandroid81/MonkeyCache.SQLite.pdb",
-        "lib/monoandroid81/MonkeyCache.SQLite.xml",
-        "lib/monoandroid90/MonkeyCache.SQLite.dll",
-        "lib/monoandroid90/MonkeyCache.SQLite.pdb",
-        "lib/monoandroid90/MonkeyCache.SQLite.xml",
+        "lib/monoandroid10.0/MonkeyCache.SQLite.dll",
+        "lib/monoandroid10.0/MonkeyCache.SQLite.pdb",
+        "lib/monoandroid10.0/MonkeyCache.SQLite.xml",
+        "lib/net461/MonkeyCache.SQLite.dll",
+        "lib/net461/MonkeyCache.SQLite.pdb",
+        "lib/net461/MonkeyCache.SQLite.xml",
+        "lib/net6.0-android31.0/MonkeyCache.SQLite.dll",
+        "lib/net6.0-android31.0/MonkeyCache.SQLite.pdb",
+        "lib/net6.0-android31.0/MonkeyCache.SQLite.xml",
+        "lib/net6.0-ios15.2/MonkeyCache.SQLite.dll",
+        "lib/net6.0-ios15.2/MonkeyCache.SQLite.pdb",
+        "lib/net6.0-ios15.2/MonkeyCache.SQLite.xml",
+        "lib/net6.0-maccatalyst15.2/MonkeyCache.SQLite.dll",
+        "lib/net6.0-maccatalyst15.2/MonkeyCache.SQLite.pdb",
+        "lib/net6.0-maccatalyst15.2/MonkeyCache.SQLite.xml",
+        "lib/net6.0-windows10.0.19041/MonkeyCache.SQLite.dll",
+        "lib/net6.0-windows10.0.19041/MonkeyCache.SQLite.pdb",
+        "lib/net6.0-windows10.0.19041/MonkeyCache.SQLite.xml",
         "lib/netstandard2.0/MonkeyCache.SQLite.dll",
         "lib/netstandard2.0/MonkeyCache.SQLite.pdb",
         "lib/netstandard2.0/MonkeyCache.SQLite.xml",
@@ -1638,10 +1671,7 @@
         "lib/xamarintvos10/MonkeyCache.SQLite.dll",
         "lib/xamarintvos10/MonkeyCache.SQLite.pdb",
         "lib/xamarintvos10/MonkeyCache.SQLite.xml",
-        "lib/xamarinwatchos10/MonkeyCache.SQLite.dll",
-        "lib/xamarinwatchos10/MonkeyCache.SQLite.pdb",
-        "lib/xamarinwatchos10/MonkeyCache.SQLite.xml",
-        "monkeycache.sqlite.1.5.2.nupkg.sha512",
+        "monkeycache.sqlite.1.6.2.nupkg.sha512",
         "monkeycache.sqlite.nuspec"
       ]
     },
@@ -1827,24 +1857,25 @@
         "skiasharp.views.forms.nuspec"
       ]
     },
-    "sqlite-net-pcl/1.7.335": {
-      "sha512": "0A9YNPbp66aB+Sitxmh9lq1KDtD4+EBPfdtnYN8WenvQqh5dNgMxUV7kaEG6EXYTi4zBxcsDKpyYJzbViWJXtw==",
+    "sqlite-net-pcl/1.8.116": {
+      "sha512": "W0NuwAOVVAR9LP4eZwNBIrim1p3EN7t8iNfSHXEhtzKAd4YyItekoQ8NyWYs4faVSrN2KZr/P5u4hycCjKKexg==",
       "type": "package",
-      "path": "sqlite-net-pcl/1.7.335",
+      "path": "sqlite-net-pcl/1.8.116",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.txt",
+        "Logo-low.png",
         "lib/netstandard2.0/SQLite-net.dll",
         "lib/netstandard2.0/SQLite-net.xml",
-        "sqlite-net-pcl.1.7.335.nupkg.sha512",
+        "sqlite-net-pcl.1.8.116.nupkg.sha512",
         "sqlite-net-pcl.nuspec"
       ]
     },
-    "SQLitePCLRaw.bundle_green/2.0.3": {
-      "sha512": "QgevRdYSy/MtL1TDdWuhoCH5cpBPZYUZd8h/WqgiLGXDa8e93Fv4/SE812SDCdjTb2+6s8SIwSLRq0z2bUeieg==",
+    "SQLitePCLRaw.bundle_green/2.0.4": {
+      "sha512": "ubFgOHDmtTcq2LU7Ss10yHnFVMm2rFVr65Ggi+Mh514KjGx4pal98P2zSvZtWf3wbtJw6G1InBgeozBtnpEfKQ==",
       "type": "package",
-      "path": "sqlitepclraw.bundle_green/2.0.3",
+      "path": "sqlitepclraw.bundle_green/2.0.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1852,34 +1883,34 @@
         "lib/Xamarin.iOS10/SQLitePCLRaw.nativelibrary.dll",
         "lib/net461/SQLitePCLRaw.batteries_v2.dll",
         "lib/net461/SQLitePCLRaw.nativelibrary.dll",
-        "lib/netcoreapp3.0/SQLitePCLRaw.batteries_v2.dll",
-        "lib/netcoreapp3.0/SQLitePCLRaw.nativelibrary.dll",
+        "lib/netcoreapp3.1/SQLitePCLRaw.batteries_v2.dll",
+        "lib/netcoreapp3.1/SQLitePCLRaw.nativelibrary.dll",
         "lib/netstandard2.0/SQLitePCLRaw.batteries_v2.dll",
-        "sqlitepclraw.bundle_green.2.0.3.nupkg.sha512",
+        "sqlitepclraw.bundle_green.2.0.4.nupkg.sha512",
         "sqlitepclraw.bundle_green.nuspec"
       ]
     },
-    "SQLitePCLRaw.core/2.0.3": {
-      "sha512": "9LO3qT7tP+0qBAQxg/PGLHPcsKri4H2zIiiMEg+7EGrnBbuUnJg1tcfKiiqFtRp74kZSAV6N0ZeSGYiodqYnoQ==",
+    "SQLitePCLRaw.core/2.0.4": {
+      "sha512": "4XlDZpDAsboMD6qZQcz9AaKblKDUTVHF+8f3lvbP7QjoqSRr2Xc0Lm34IK2pjRIYnyFLhI3yOJ5YWfOiCid2yg==",
       "type": "package",
-      "path": "sqlitepclraw.core/2.0.3",
+      "path": "sqlitepclraw.core/2.0.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard2.0/SQLitePCLRaw.core.dll",
-        "sqlitepclraw.core.2.0.3.nupkg.sha512",
+        "sqlitepclraw.core.2.0.4.nupkg.sha512",
         "sqlitepclraw.core.nuspec"
       ]
     },
-    "SQLitePCLRaw.provider.dynamic_cdecl/2.0.3": {
-      "sha512": "RybfknbgdhjD+g38vyLA8Ram3CbivpZEUa+ZthtULROrEp81V8hxK30mIsAM9YFb3cOmnF/3hOIjhpVo9h72Lg==",
+    "SQLitePCLRaw.provider.dynamic_cdecl/2.0.4": {
+      "sha512": "AY6+vv/4ji1mCkLrS6HP/88rHT9YFKRyg3LUj8RyIk6imJMUFdQDiP8rK8gq0a/0FbqspLjK1t7rtKcr7FXRYA==",
       "type": "package",
-      "path": "sqlitepclraw.provider.dynamic_cdecl/2.0.3",
+      "path": "sqlitepclraw.provider.dynamic_cdecl/2.0.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll",
-        "sqlitepclraw.provider.dynamic_cdecl.2.0.3.nupkg.sha512",
+        "sqlitepclraw.provider.dynamic_cdecl.2.0.4.nupkg.sha512",
         "sqlitepclraw.provider.dynamic_cdecl.nuspec"
       ]
     },
