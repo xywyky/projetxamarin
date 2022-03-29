@@ -10,10 +10,34 @@
         <DataTemplate x:DataType="viewModels:Tassk" x:Key="TodoTemplate">
             <ViewCell>
                 <StackLayout Orientation="Vertical" HorizontalOptions="StartAndExpand">
-                    <Label Text="{Binding Name}"
+
+                    <Grid ColumnDefinitions="*,*">
+                        <Label Text="{Binding Name}"
+                           Grid.Column="0"
                            FontSize="32"
                            LineBreakMode="WordWrap"
-                    />
+                        />
+                        <Button Grid.Column="1"
+                                Text="Modifier"
+                                TextColor="White"
+                                BackgroundColor="DarkRed"
+                                CornerRadius="32"
+                                HeightRequest="64"
+                                Command="{Binding ModifCommand}"
+                                CommandParameter="{Binding .}"
+                        />
+                        <Button Grid.Column="2"
+                                Text="Supprimer"
+                                TextColor="White"
+                                BackgroundColor="DarkRed"
+                                CornerRadius="32"
+                                HeightRequest="64"
+                                Command="{Binding DeleteCommand}"
+                                CommandParameter="{Binding .}"
+                        />
+
+                    </Grid>
+
                     
                 </StackLayout>
             </ViewCell>
@@ -29,8 +53,8 @@
 
             <Button Text="Ajouter"
                 BackgroundColor="LightBlue"
-                CornerRadius="16"
-                HeightRequest="32"
+                CornerRadius="32"
+                HeightRequest="64"
                     Grid.Row="1"
                 HorizontalOptions="FillAndExpand"
                 Command="{Binding AddCommand}"

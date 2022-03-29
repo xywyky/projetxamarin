@@ -58,15 +58,34 @@ namespace TimeTracker.Apps.ViewModels
         public Tassk Create(Tassk tassk)
         {
             return new Tassk(
+                new Command<Tassk>(DeleteAction),
+                new Command<Tassk>(ModifAction)
                 )
             {
-                Name = tassk.Name
+                Name = tassk.Name,
+                Id = tassk.Id
             }
                 ;
 
 
             return null;
 
+        }
+
+        private void ModifAction(Tassk tassk)
+        {
+            NavigationService.PushAsync<AddOrEditTask>(new Dictionary<string, object>()
+            {
+                ["Index"] = tassk.Id
+            });
+        }
+
+        private void DeleteAction(Tassk tassk)
+        {
+            int index = tassk.Id;
+            var todoService = DependencyService.Get<ApiService>();
+            todoService.deleteTaskAsync(index);
+            todoService.getTasks(todoService.proj);
         }
     }
 }
