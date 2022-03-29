@@ -32,3 +32,4 @@ C:\Users\neos8\Source\Repos\projet_xamarin\src\TimeTracker.Apps\bin\Debug\netsta
 C:\Users\neos8\Source\Repos\projet_xamarin\src\TimeTracker.Apps\bin\Debug\netstandard2.0\TimeTracker.Apps.dll
 C:\Users\neos8\Source\Repos\projet_xamarin\src\TimeTracker.Apps\bin\Debug\netstandard2.0\TimeTracker.Apps.pdb
 C:\Users\neos8\Source\Repos\projet_xamarin\src\TimeTracker.Apps\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\neos8\Source\Repos\projet_xamarin\src\TimeTracker.Apps\obj\Debug\netstandard2.0\Pages\EditPass.xaml.g.cs
