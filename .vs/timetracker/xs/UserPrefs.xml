@@ -1,20 +1,20 @@
 ﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{B5EC25B7-5CDF-4ECE-ABA7-C81E862F6A73}|Default" NuGet.AddPackagesDialog.IncludePrerelease="True">
   <MonoDevelop.Ide.ItemProperties.TimeTracker.Apps.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.49DC15E3-58CB-465F-A555-11411410EE45" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="src/TimeTracker.Apps/service/ApiService.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="src/TimeTracker.Apps.iOS/Main.cs">
     <Files>
       <File FileName="src/TimeTracker.Apps/ViewModels/EditPassModel.cs" Line="24" Column="1" />
       <File FileName="src/TimeTracker.Apps/Pages/EditProfil.xaml" />
       <File FileName="src/TimeTracker.Apps/Pages/EditProfil.xaml.cs" />
       <File FileName="src/TimeTracker.Apps/ViewModels/EditUserModel.cs" />
-      <File FileName="src/TimeTracker.Apps/service/ApiService.cs" Line="1" Column="1" />
-      <File FileName="src/TimeTracker.Apps/Pages/ListProjet.xaml" />
-      <File FileName="src/TimeTracker.Apps/ViewModels/MainViewModel.cs" Line="1" Column="1" />
-      <File FileName="src/TimeTracker.Apps/ViewModels/ListProjetViewModel.cs" />
+      <File FileName="src/TimeTracker.Apps/service/ApiService.cs" Line="221" Column="38" />
+      <File FileName="src/TimeTracker.Apps/Pages/ListProjet.xaml" Line="14" Column="28" />
+      <File FileName="src/TimeTracker.Apps/ViewModels/MainViewModel.cs" Line="51" Column="1" />
+      <File FileName="src/TimeTracker.Apps/ViewModels/ListProjetViewModel.cs" Line="38" Column="33" />
       <File FileName="src/TimeTracker.Apps/Pages/EditPass.xaml.cs" />
       <File FileName="src/TimeTracker.Apps/Pages/EditPass.xaml" />
       <File FileName="src/TimeTracker.Apps/ViewModels/InscriptionModel.cs" />
       <File FileName="src/TimeTracker.Apps/ViewModels/Projet.cs" />
-      <File FileName="src/TimeTracker.Apps/ViewModels/Projet2.cs" />
+      <File FileName="src/TimeTracker.Apps/ViewModels/Projet2.cs" Line="45" Column="1" />
       <File FileName="src/TimeTracker.Apps/ViewModels/AddOrEditViewModel.cs" />
       <File FileName="src/TimeTracker.Apps/ViewModels/Profil.cs" />
       <File FileName="src/TimeTracker.Apps/ViewModels/Token.cs" />
@@ -23,18 +23,27 @@
       <File FileName="src/TimeTracker.Apps/service/ProjetService.cs" />
       <File FileName="src/TimeTracker.Apps/obj/Debug/netstandard2.0/Pages/EditPass.xaml.g.cs" />
       <File FileName="src/TimeTracker.Apps/obj/Debug/netstandard2.0/Pages/EditProfil.xaml.g.cs" />
+      <File FileName="src/TimeTracker.Apps/Pages/ListTask.xaml" Line="17" Column="21" />
+      <File FileName="src/TimeTracker.Apps/Pages/ListTask.xaml.cs" Line="15" Column="10" />
+      <File FileName="src/TimeTracker.Apps/Pages/ListProjet.xaml.cs" Line="11" Column="13" />
+      <File FileName="src/TimeTracker.Apps/ViewModels/ListTaskViewModel.cs" Line="62" Column="30" />
+      <File FileName="src/TimeTracker.Apps.iOS/Main.cs" Line="16" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="timetracker" expanded="True">
             <Node name="TimeTracker.Apps" expanded="True">
-              <Node name="service" expanded="True">
-                <Node name="ApiService.cs" selected="True" />
+              <Node name="Pages" expanded="True">
+                <Node name="ListProjet.xaml" expanded="True" />
+                <Node name="ListTask.xaml" expanded="True" />
               </Node>
+              <Node name="service" expanded="True" />
               <Node name="ViewModels" expanded="True" />
             </Node>
-            <Node name="TimeTracker.Apps.iOS" expanded="True" />
+            <Node name="TimeTracker.Apps.iOS" expanded="True">
+              <Node name="Main.cs" selected="True" />
+            </Node>
           </Node>
         </State>
       </Pad>

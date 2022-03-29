@@ -12,7 +12,6 @@ namespace TimeTracker.Apps.ViewModels
 {
     public class ListProjetViewModel : ViewModelBase
     {
-        private ObservableCollection<Projet> _projet;
 
         private ObservableCollection<Datum> _projet2;
 
@@ -22,22 +21,25 @@ namespace TimeTracker.Apps.ViewModels
             set => SetProperty(ref _projet2, value);
         }
 
-        public ObservableCollection<Projet> Projets
-        {
-            get => _projet;
-            set => SetProperty(ref _projet, value);
-        }
-
         public ICommand AddCommand { get; }
         public ICommand EditCommand { get; }
 
         public ListProjetViewModel()
         {
-            Projets = new ObservableCollection<Projet>();
             Projets2 = new ObservableCollection<Datum>();
 
             AddCommand = new Command(AddAction);
             EditCommand = new Command(EditAction);
+        }
+
+        private void TaskAction(Datum datum)
+        {
+            var todoService = DependencyService.Get<ApiService>();
+            todoService.getTasks(datum.Id);
+            NavigationService.PushAsync<ListTask>(new Dictionary<string, object>()
+            {
+                ["Index"] = datum.Id
+            });
         }
 
         private void EditAction()
@@ -63,7 +65,8 @@ namespace TimeTracker.Apps.ViewModels
         {
             return new Datum(
                     new Command<Datum>(DeleteAction),
-                    new Command<Datum>(ModifAction))
+                    new Command<Datum>(ModifAction),
+                    new Command<Datum>(TaskAction))
             {
                 Name = datum._name,
                 Description = datum._description,

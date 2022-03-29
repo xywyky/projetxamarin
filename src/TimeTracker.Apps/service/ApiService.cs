@@ -25,7 +25,7 @@ namespace TimeTracker.Apps.Services
 
         public List<Datum> Projet;
 
-        //public List<Tassk> Tasks;
+        public List<Tassk> Tasks;
 
         public ApiService()
         {
@@ -66,6 +66,7 @@ namespace TimeTracker.Apps.Services
             return response;
 
         }
+
 
         public async Task<HttpResponseMessage> inscription(string FN, string LN, string email, string pass)
         {
@@ -205,15 +206,17 @@ namespace TimeTracker.Apps.Services
             await client.PutAsync("api/v1/projects/"+id,content);
 
         }
+
+
         //a addapter par rapport au truc de guigui
-        /*public async void getTasks(int idProject)
+
+        public async void getTasks(int idProject)
         {
             var json2 = await client.GetAsync("api/v1/projects/"+idProject+"/tasks");
             var bodystringresponse = await json2.Content.ReadAsStringAsync();
-            var presqueproj = JsonConvert.DeserializeObject<Tassk>(bodystringresponse);
+            var presqueproj = JsonConvert.DeserializeObject<Root>(bodystringresponse);
             Tasks = presqueproj.data;
-
-        }*/
+        }
 
         public async Task postTaskAsync(int idProject, string name)
         {

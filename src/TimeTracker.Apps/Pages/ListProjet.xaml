@@ -36,6 +36,14 @@
                                 Command="{Binding DeleteCommand}"
                                 CommandParameter="{Binding .}"
                         />
+                        <Button Grid.Column="2"
+                                Text="Task"
+                                BackgroundColor="LightBlue"
+                                CornerRadius="32"
+                                HeightRequest="64"
+                                Command="{Binding TaskCommand}"
+                                CommandParameter="{Binding .}"
+                        />
                     </Grid>
                 </StackLayout>
             </ViewCell>

@@ -8,17 +8,17 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("TimeTracker.Apps.Pages.MainPage.xaml", "Pages/MainPage.xaml", typeof(global::TimeTracker.Apps.Pages.MainPage))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("TimeTracker.Apps.Pages.ListTask.xaml", "Pages/ListTask.xaml", typeof(global::TimeTracker.Apps.Pages.ListTask))]
 
 namespace TimeTracker.Apps.Pages {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Pages/MainPage.xaml")]
-    public partial class MainPage : global::Storm.Mvvm.Forms.BaseContentPage {
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Pages/ListTask.xaml")]
+    public partial class ListTask : global::Storm.Mvvm.Forms.BaseContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
-            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(MainPage));
+            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(ListTask));
         }
     }
 }
