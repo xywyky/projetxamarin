@@ -2363,32 +2363,34 @@
     ]
   },
   "packageFolders": {
-    "/Users/bernagaudtristan/.nuget/packages/": {}
+    "C:\\Users\\neos8\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/bernagaudtristan/Documents/M1/semestre 2/Developpement_multi_plateforme/TP/Xamarin/TP1/Cours-Xamarin/project/src/TimeTracker.Apps.iOS/TimeTracker.Apps.iOS.csproj",
+      "projectUniqueName": "C:\\Users\\neos8\\Source\\Repos\\projet_xamarin\\src\\TimeTracker.Apps.iOS\\TimeTracker.Apps.iOS.csproj",
       "projectName": "TimeTracker.Apps.iOS",
-      "projectPath": "/Users/bernagaudtristan/Documents/M1/semestre 2/Developpement_multi_plateforme/TP/Xamarin/TP1/Cours-Xamarin/project/src/TimeTracker.Apps.iOS/TimeTracker.Apps.iOS.csproj",
-      "packagesPath": "/Users/bernagaudtristan/.nuget/packages/",
-      "outputPath": "/Users/bernagaudtristan/Documents/M1/semestre 2/Developpement_multi_plateforme/TP/Xamarin/TP1/Cours-Xamarin/project/src/TimeTracker.Apps.iOS/obj/",
+      "projectPath": "C:\\Users\\neos8\\Source\\Repos\\projet_xamarin\\src\\TimeTracker.Apps.iOS\\TimeTracker.Apps.iOS.csproj",
+      "packagesPath": "C:\\Users\\neos8\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\neos8\\Source\\Repos\\projet_xamarin\\src\\TimeTracker.Apps.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
-        "/Users/bernagaudtristan/.config/NuGet/NuGet.Config"
+        "C:\\Users\\neos8\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "xamarinios10"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "/Users/bernagaudtristan/Documents/M1/semestre 2/Developpement_multi_plateforme/TP/Xamarin/TP1/Cours-Xamarin/project/src/TimeTracker.Apps/TimeTracker.Apps.csproj": {
-              "projectPath": "/Users/bernagaudtristan/Documents/M1/semestre 2/Developpement_multi_plateforme/TP/Xamarin/TP1/Cours-Xamarin/project/src/TimeTracker.Apps/TimeTracker.Apps.csproj"
+            "C:\\Users\\neos8\\Source\\Repos\\projet_xamarin\\src\\TimeTracker.Apps\\TimeTracker.Apps.csproj": {
+              "projectPath": "C:\\Users\\neos8\\Source\\Repos\\projet_xamarin\\src\\TimeTracker.Apps\\TimeTracker.Apps.csproj"
             }
           }
         }
