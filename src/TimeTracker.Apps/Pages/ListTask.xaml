@@ -27,27 +27,14 @@
                   ItemTemplate="{StaticResource TodoTemplate}"
                   />
 
-        <Grid ColumnDefinitions="*,*" Grid.Row="1">
             <Button Text="Ajouter"
                 BackgroundColor="LightBlue"
                 CornerRadius="16"
                 HeightRequest="32"
-                    Grid.Column
-                    ="0"
+                    Grid.Row="1"
                 HorizontalOptions="FillAndExpand"
                 Command="{Binding AddCommand}"
                 />
-        <Button Text="Edit profil"
-                BackgroundColor="LightBlue"
-                CornerRadius="16"
-                HeightRequest="32"
-                Grid.Column
-                    ="1"
-                HorizontalOptions="FillAndExpand"
-                Command="{Binding EditCommand}"
-                />
-
-            </Grid>
     </Grid>
 
 

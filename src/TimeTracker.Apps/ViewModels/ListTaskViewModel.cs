@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Storm.Mvvm;
+using TimeTracker.Apps.Pages;
 using TimeTracker.Apps.Services;
 using Xamarin.Forms;
 
@@ -15,8 +16,6 @@ namespace TimeTracker.Apps.ViewModels
         private ObservableCollection<Tassk> _tasks;
 
         public ICommand AddCommand { get; }
-
-        public ICommand EditCommand { get; }
 
         public ObservableCollection<Tassk> Tasks
         {
@@ -31,17 +30,15 @@ namespace TimeTracker.Apps.ViewModels
             Tasks = new ObservableCollection<Tassk>();
 
             AddCommand = new Command(AddAction);
-            EditCommand = new Command(EditAction);
         }
 
-        private void EditAction(object obj)
-        {
-            throw new NotImplementedException();
-        }
 
         private void AddAction(object obj)
         {
-            throw new NotImplementedException();
+            NavigationService.PushAsync<AddOrEditTask>(new Dictionary<string, object>()
+            {
+                ["Index"] = -1
+            });
         }
 
         public override Task OnResume()
@@ -57,6 +54,7 @@ namespace TimeTracker.Apps.ViewModels
             return base.OnResume();
         }
 
+        //surment ajouter le temps plus tard dans un Task 
         public Tassk Create(Tassk tassk)
         {
             return new Tassk(

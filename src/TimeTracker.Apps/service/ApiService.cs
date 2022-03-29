@@ -27,6 +27,8 @@ namespace TimeTracker.Apps.Services
 
         public List<Tassk> Tasks;
 
+        public int proj;
+
         public ApiService()
         {
            client = new HttpClient()
@@ -48,7 +50,7 @@ namespace TimeTracker.Apps.Services
                 { "client_secret", "COURS" }
 
             };
-
+            Console.WriteLine("test");
             var json = JsonConvert.SerializeObject(values);
             var content =
                 new StringContent(json, Encoding.UTF8, "application/json");
@@ -216,6 +218,7 @@ namespace TimeTracker.Apps.Services
             var bodystringresponse = await json2.Content.ReadAsStringAsync();
             var presqueproj = JsonConvert.DeserializeObject<Root>(bodystringresponse);
             Tasks = presqueproj.data;
+            proj = idProject;
         }
 
         public async Task postTaskAsync(int idProject, string name)
