@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Windows.Input;
 using Newtonsoft.Json;
 using Storm.Mvvm;
+using Xamarin.Forms;
 
 namespace TimeTracker.Apps.ViewModels
 {
@@ -10,7 +11,9 @@ namespace TimeTracker.Apps.ViewModels
     {
         public int _id;
         public string _name;
-        public List<Time> _temps;
+        public Time _temps;
+        private TimeSpan _current;
+
 
         public ICommand DeleteCommand { get; }
         public ICommand ModifCommand { get; }
@@ -27,16 +30,39 @@ namespace TimeTracker.Apps.ViewModels
             set => SetProperty(ref _name, value);
         }
 
-        public List<Time> Temps
+        public Time Temps
         {
             get => _temps;
             set => SetProperty(ref _temps, value);
+        }
+
+        public TimeSpan Current
+        {
+            get => _current;
+            set
+            {
+                SetProperty(ref _current, value);
+                Update();
+            }
         }
 
         public Tassk(ICommand deleteCommand, ICommand modifCommand)
         {
             DeleteCommand = deleteCommand;
             ModifCommand = modifCommand;
+        }
+
+        public void Update()
+        {
+            Device.StartTimer(new TimeSpan(0, 0, 1), () =>
+            {
+                // do something every 1 second
+                Device.BeginInvokeOnMainThread(() =>
+                {
+                    Current = Current.Subtract(new TimeSpan(0,0,1));
+                });
+                return true; // runs again, or false to stop
+            });
         }
 
     }

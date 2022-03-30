@@ -17,6 +17,11 @@
                            FontSize="32"
                            LineBreakMode="WordWrap"
                         />
+                        <Label Text="{Binding Current}"
+                           Grid.Column="0"
+                           FontSize="32"
+                           LineBreakMode="WordWrap"
+                        />
                         <Button Grid.Column="1"
                                 Text="Modifier"
                                 TextColor="White"

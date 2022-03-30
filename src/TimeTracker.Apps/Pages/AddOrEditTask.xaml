@@ -14,6 +14,12 @@
                HorizontalOptions="FillAndExpand"
                HeightRequest="64"
                />
+        <DatePicker Date="{Binding Start}"
+                    Format="dd/MM/yyyy"
+                    />
+        <DatePicker Date="{Binding End}"
+                    Format="dd/MM/yyyy"
+                    />
         <Button Text="{Binding Index, Converter={StaticResource AddOrEditTextConverter}}"
                 BackgroundColor="LightGreen"
                 CornerRadius="32"

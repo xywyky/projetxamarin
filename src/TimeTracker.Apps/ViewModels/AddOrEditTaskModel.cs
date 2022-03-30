@@ -13,13 +13,25 @@ namespace TimeTracker.Apps.ViewModels
     {
         private string _name;
         private int _index;
-
+        private DateTime _start_time;
+        private DateTime _end_time;
 
         public string Name
         {
             get => _name;
             set => SetProperty(ref _name, value);
         }
+        public DateTime Start
+        {
+            get => _start_time;
+            set => SetProperty(ref _start_time, value);
+        }
+        public DateTime End
+        {
+            get => _end_time;
+            set => SetProperty(ref _end_time, value);
+        }
+        
 
         [NavigationParameter]
         public int Index
@@ -80,10 +92,12 @@ namespace TimeTracker.Apps.ViewModels
         {
             await NavigationService.PopAsync();
         }
-
+        
 
         private async void ValidateAction()
         {
+            string debut = Start.ToString();
+            string fin = End.ToString();
             string name = Name;
             if (string.IsNullOrEmpty(name))
             {
@@ -94,12 +108,14 @@ namespace TimeTracker.Apps.ViewModels
             if (Index < 0)
             {
                 todoService2.postTaskAsync(name);
+                await todoService2.postTimeAsync(Index, debut, fin);
             }
             else
             {
                 todoService2.putTaskAsync(name, Index);
+                await todoService2.putTimeAsync(Index, Index, debut, fin);
             }
-
+        
             Name = "";
 
             todoService2.getTasks(todoService2.proj);

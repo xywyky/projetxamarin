@@ -15,6 +15,7 @@ namespace TimeTracker.Apps.ViewModels
 
         private ObservableCollection<Tassk> _tasks;
 
+
         public ICommand AddCommand { get; }
 
         public ObservableCollection<Tassk> Tasks
@@ -63,12 +64,11 @@ namespace TimeTracker.Apps.ViewModels
                 )
             {
                 Name = tassk.Name,
-                Id = tassk.Id
+                Id = tassk.Id,
+                Current = tassk.Temps.EndTime.Subtract(tassk.Temps.StartTime) 
+                
             }
                 ;
-
-
-            return null;
 
         }
 
