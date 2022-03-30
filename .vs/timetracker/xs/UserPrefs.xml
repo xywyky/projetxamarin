@@ -1,6 +1,6 @@
 ﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{B5EC25B7-5CDF-4ECE-ABA7-C81E862F6A73}|Default" NuGet.AddPackagesDialog.IncludePrerelease="True">
-  <MonoDevelop.Ide.ItemProperties.TimeTracker.Apps.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.49DC15E3-58CB-465F-A555-11411410EE45" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="src/TimeTracker.Apps/ViewModels/AddOrEditTaskModel.cs">
+  <MonoDevelop.Ide.ItemProperties.TimeTracker.Apps.iOS PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="src/TimeTracker.Apps/Pages/ListTimerHistorique.xaml.cs">
     <Files>
       <File FileName="src/TimeTracker.Apps/ViewModels/EditPassModel.cs" Line="24" Column="1" />
       <File FileName="src/TimeTracker.Apps/Pages/EditProfil.xaml" />
@@ -33,22 +33,23 @@
       <File FileName="src/TimeTracker.Apps/Pages/AddOrEdit.xaml" />
       <File FileName="src/TimeTracker.Apps/Converters/AddOrEditConverter.cs" />
       <File FileName="src/TimeTracker.Apps/Pages/AddOrEdit.xaml.cs" />
-      <File FileName="src/TimeTracker.Apps/ViewModels/AddOrEditTaskModel.cs" Line="64" Column="42" />
+      <File FileName="src/TimeTracker.Apps/ViewModels/AddOrEditTaskModel.cs" />
+      <File FileName="src/TimeTracker.Apps/Pages/ListTimerHistorique.xaml" />
+      <File FileName="src/TimeTracker.Apps/Pages/ListTimerHistorique.xaml.cs" />
+      <File FileName="src/TimeTracker.Apps/ViewModels/ListTimerViewModel.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="timetracker" expanded="True">
             <Node name="TimeTracker.Apps" expanded="True">
-              <Node name="Converters" expanded="True" />
               <Node name="Pages" expanded="True">
-                <Node name="AddOrEdit.xaml" expanded="True" />
-                <Node name="AddOrEditTask.xaml" expanded="True" />
+                <Node name="ListTask.xaml" expanded="True" />
+                <Node name="ListTimerHistorique.xaml" expanded="True">
+                  <Node name="ListTimerHistorique.xaml.cs" selected="True" />
+                </Node>
               </Node>
-              <Node name="service" expanded="True" />
-              <Node name="ViewModels" expanded="True">
-                <Node name="AddOrEditTaskModel.cs" selected="True" />
-              </Node>
+              <Node name="ViewModels" expanded="True" />
             </Node>
             <Node name="TimeTracker.Apps.iOS" expanded="True" />
           </Node>

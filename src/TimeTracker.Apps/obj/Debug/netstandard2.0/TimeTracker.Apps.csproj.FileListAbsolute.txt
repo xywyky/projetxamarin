@@ -38,23 +38,4 @@ C:/Users/neos8/Source/Repos/projet_xamarin/src/TimeTracker.Apps/obj/Debug/netsta
 >>>>>>> 50564e4b059ea89abed36815af140bbf427edd65
 /Users/bernagaudtristan/Documents/M1/semestre 2/Developpement_multi_plateforme/TP/Xamarin/TP1/Cours-Xamarin/project/src/TimeTracker.Apps/obj/Debug/netstandard2.0/Pages/ListTask.xaml.g.cs
 /Users/bernagaudtristan/Documents/M1/semestre 2/Developpement_multi_plateforme/TP/Xamarin/TP1/Cours-Xamarin/project/src/TimeTracker.Apps/obj/Debug/netstandard2.0/Pages/AddOrEditTask.xaml.g.cs
-C:\Users\neos8\Source\Repos\projet_xamarin\src\TimeTracker.Apps\bin\Debug\netstandard2.0\TimeTracker.Apps.deps.json
-C:\Users\neos8\Source\Repos\projet_xamarin\src\TimeTracker.Apps\bin\Debug\netstandard2.0\TimeTracker.Apps.dll
-C:\Users\neos8\Source\Repos\projet_xamarin\src\TimeTracker.Apps\bin\Debug\netstandard2.0\TimeTracker.Apps.pdb
-C:\Users\neos8\Source\Repos\projet_xamarin\src\TimeTracker.Apps\obj\Debug\netstandard2.0\TimeTracker.Apps.csproj.AssemblyReference.cache
-C:\Users\neos8\Source\Repos\projet_xamarin\src\TimeTracker.Apps\obj\Debug\netstandard2.0\TimeTracker.Apps.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\neos8\Source\Repos\projet_xamarin\src\TimeTracker.Apps\obj\Debug\netstandard2.0\App.xaml.g.cs
-C:\Users\neos8\Source\Repos\projet_xamarin\src\TimeTracker.Apps\obj\Debug\netstandard2.0\Pages\AddOrEdit.xaml.g.cs
-C:\Users\neos8\Source\Repos\projet_xamarin\src\TimeTracker.Apps\obj\Debug\netstandard2.0\Pages\AddOrEditTask.xaml.g.cs
-C:\Users\neos8\Source\Repos\projet_xamarin\src\TimeTracker.Apps\obj\Debug\netstandard2.0\Pages\EditPass.xaml.g.cs
-C:\Users\neos8\Source\Repos\projet_xamarin\src\TimeTracker.Apps\obj\Debug\netstandard2.0\Pages\EditProfil.xaml.g.cs
-C:\Users\neos8\Source\Repos\projet_xamarin\src\TimeTracker.Apps\obj\Debug\netstandard2.0\Pages\ListProjet.xaml.g.cs
-C:\Users\neos8\Source\Repos\projet_xamarin\src\TimeTracker.Apps\obj\Debug\netstandard2.0\Pages\ListTask.xaml.g.cs
-C:\Users\neos8\Source\Repos\projet_xamarin\src\TimeTracker.Apps\obj\Debug\netstandard2.0\Pages\MainPage.xaml.g.cs
-C:\Users\neos8\Source\Repos\projet_xamarin\src\TimeTracker.Apps\obj\Debug\netstandard2.0\Pages\PageInscription.xaml.g.cs
-C:\Users\neos8\Source\Repos\projet_xamarin\src\TimeTracker.Apps\obj\Debug\netstandard2.0\TimeTracker.Apps.AssemblyInfoInputs.cache
-C:\Users\neos8\Source\Repos\projet_xamarin\src\TimeTracker.Apps\obj\Debug\netstandard2.0\TimeTracker.Apps.AssemblyInfo.cs
-C:\Users\neos8\Source\Repos\projet_xamarin\src\TimeTracker.Apps\obj\Debug\netstandard2.0\TimeTracker.Apps.csproj.CoreCompileInputs.cache
-C:\Users\neos8\Source\Repos\projet_xamarin\src\TimeTracker.Apps\obj\Debug\netstandard2.0\XamlC.stamp
-C:\Users\neos8\Source\Repos\projet_xamarin\src\TimeTracker.Apps\obj\Debug\netstandard2.0\TimeTracker.Apps.dll
-C:\Users\neos8\Source\Repos\projet_xamarin\src\TimeTracker.Apps\obj\Debug\netstandard2.0\TimeTracker.Apps.pdb
+/Users/bernagaudtristan/Documents/M1/semestre 2/Developpement_multi_plateforme/TP/Xamarin/TP1/Cours-Xamarin/project/src/TimeTracker.Apps/obj/Debug/netstandard2.0/Pages/ListTimerHistorique.xaml.g.cs

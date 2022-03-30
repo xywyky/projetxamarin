@@ -59,7 +59,8 @@
 
         <Grid ColumnDefinitions="*,*" Grid.Row="1">
             <Button Text="Ajouter"
-                BackgroundColor="LightBlue"
+                TextColor="Black"
+                BackgroundColor="LightGreen"
                 CornerRadius="16"
                 HeightRequest="32"
                     Grid.Column

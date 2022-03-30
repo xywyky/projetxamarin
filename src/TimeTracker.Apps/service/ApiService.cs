@@ -116,27 +116,21 @@ namespace TimeTracker.Apps.Services
             var json = JsonConvert.SerializeObject(values);
             var content =
                 new StringContent(json, Encoding.UTF8, "application/json");
-            var response = await client.PostAsync("api/v1/projects", content);
+           await client.PostAsync("api/v1/projects", content);
 
-            Console.WriteLine(response);
         }
 
         //peut etre mettre un await mais d'autre truc a changer apres je pense 
         public void deleteProjects(int id)
         {
-            Console.WriteLine("ho");
-            Console.WriteLine(id);
             client.DeleteAsync("api/v1/projects/" + id);
         }
 
 
         public async Task<Profil> getMe()
         {
-            Console.WriteLine("oui");
             var test = await client.GetAsync("api/v1/me");
-            Console.WriteLine("oui");
             var bodystringresponse = await test.Content.ReadAsStringAsync();
-            Console.WriteLine(bodystringresponse);
             ME = JsonConvert.DeserializeObject<Profil>(bodystringresponse);
 
             return ME;
@@ -215,6 +209,7 @@ namespace TimeTracker.Apps.Services
             var json2 = await client.GetAsync("api/v1/projects/"+idProject+"/tasks");
             var bodystringresponse = await json2.Content.ReadAsStringAsync();
             var presqueproj = JsonConvert.DeserializeObject<Root>(bodystringresponse);
+            Console.WriteLine(bodystringresponse);
             Tasks = presqueproj.data;
             proj = idProject;
         }
