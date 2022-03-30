@@ -10,10 +10,11 @@ namespace TimeTracker.Apps.ViewModels
     {
         public int _id;
         public string _name;
-        public List<Time> _temps;
+        public List<Time> times { get; set; }
 
         public ICommand DeleteCommand { get; }
         public ICommand ModifCommand { get; }
+        public ICommand HistoCommand { get; }
 
         public int Id
         {
@@ -27,16 +28,11 @@ namespace TimeTracker.Apps.ViewModels
             set => SetProperty(ref _name, value);
         }
 
-        public List<Time> Temps
-        {
-            get => _temps;
-            set => SetProperty(ref _temps, value);
-        }
-
-        public Tassk(ICommand deleteCommand, ICommand modifCommand)
+        public Tassk(ICommand deleteCommand, ICommand modifCommand, ICommand histoCommand)
         {
             DeleteCommand = deleteCommand;
             ModifCommand = modifCommand;
+            HistoCommand = histoCommand;
         }
 
     }

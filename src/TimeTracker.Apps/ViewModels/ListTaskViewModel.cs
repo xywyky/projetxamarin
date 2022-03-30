@@ -57,19 +57,32 @@ namespace TimeTracker.Apps.ViewModels
         //surment ajouter le temps plus tard dans un Task 
         public Tassk Create(Tassk tassk)
         {
+
             return new Tassk(
                 new Command<Tassk>(DeleteAction),
-                new Command<Tassk>(ModifAction)
+                new Command<Tassk>(ModifAction),
+                new Command<Tassk>(HistoAction)
                 )
             {
                 Name = tassk.Name,
-                Id = tassk.Id
+                Id = tassk.Id,
+                times = tassk.times
+               
+                
             }
                 ;
 
 
             return null;
 
+        }
+
+        private void HistoAction(Tassk tassk)
+        {
+            NavigationService.PushAsync<ListTimerHistorique>(new Dictionary<string, object>()
+            {
+                ["Index"] = tassk.Id
+            });
         }
 
         private void ModifAction(Tassk tassk)

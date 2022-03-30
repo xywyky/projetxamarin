@@ -10,23 +10,40 @@
         <DataTemplate x:DataType="viewModels:Tassk" x:Key="TodoTemplate">
             <ViewCell>
                 <StackLayout Orientation="Vertical" HorizontalOptions="StartAndExpand">
-
-                    <Grid ColumnDefinitions="*,*">
+                    
                         <Label Text="{Binding Name}"
-                           Grid.Column="0"
                            FontSize="32"
                            LineBreakMode="WordWrap"
                         />
-                        <Button Grid.Column="1"
+
+                        <Button 
+                                Text="Historique"
+                                TextColor="Black"
+                                BackgroundColor="Gold"
+                                CornerRadius="32"
+                                HeightRequest="64"
+                                Command="{Binding HistoCommand}"
+                                CommandParameter="{Binding .}"
+                        />
+
+                    <Button 
+                                Text="Nouveaux timer"
+                                TextColor="Black"
+                                BackgroundColor="LightGreen"
+                                CornerRadius="32"
+                                HeightRequest="64"
+                        />
+
+                       <Grid ColumnDefinitions="*, *" >
+                        <Button Grid.Column="0"
                                 Text="Modifier"
-                                TextColor="White"
-                                BackgroundColor="DarkRed"
+                                BackgroundColor="LightBlue"
                                 CornerRadius="32"
                                 HeightRequest="64"
                                 Command="{Binding ModifCommand}"
                                 CommandParameter="{Binding .}"
                         />
-                        <Button Grid.Column="2"
+                        <Button Grid.Column="1"
                                 Text="Supprimer"
                                 TextColor="White"
                                 BackgroundColor="DarkRed"
@@ -35,8 +52,8 @@
                                 Command="{Binding DeleteCommand}"
                                 CommandParameter="{Binding .}"
                         />
-
-                    </Grid>
+                          </Grid>
+                    
 
                     
                 </StackLayout>
@@ -44,7 +61,7 @@
         </DataTemplate>
     </ContentPage.Resources>
     
-    <Grid RowDefinitions="*, auto" Margin="12,0,12,48">
+    <Grid RowDefinitions="*, auto" Margin="12,0,12,15">
         <ListView ItemsSource="{Binding Tasks}"
                   Grid.Row="0"
                   HasUnevenRows="True"
@@ -52,7 +69,8 @@
                   />
 
             <Button Text="Ajouter"
-                BackgroundColor="LightBlue"
+                TextColor="Black"
+                BackgroundColor="LightGreen"
                 CornerRadius="32"
                 HeightRequest="64"
                     Grid.Row="1"
