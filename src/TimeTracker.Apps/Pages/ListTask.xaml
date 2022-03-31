@@ -32,6 +32,8 @@
                                 BackgroundColor="LightGreen"
                                 CornerRadius="32"
                                 HeightRequest="64"
+                                Command="{Binding TimerCommand}"
+                                CommandParameter="{Binding .}"
                         />
 
                        <Grid ColumnDefinitions="*, *" >

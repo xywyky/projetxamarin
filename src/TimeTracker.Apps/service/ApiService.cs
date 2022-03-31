@@ -84,8 +84,7 @@ namespace TimeTracker.Apps.Services
             };
            
             var json = JsonConvert.SerializeObject(values);
-            var content =
-                new StringContent(json, Encoding.UTF8, "application/json");
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
             var response = await client.PostAsync("api/v1/register", content);
 
             return response;
@@ -251,7 +250,7 @@ namespace TimeTracker.Apps.Services
 
         }
 
-        public async Task postTimeAsync(int idProject, int idTask, string start_time, string end_time)
+        public async Task postTimeAsync( int idTask, string start_time, string end_time)
         {
             var values = new Dictionary<string, string>
             {
@@ -262,10 +261,15 @@ namespace TimeTracker.Apps.Services
             var content =
                 new StringContent(json, Encoding.UTF8, "application/json");
 
-            await client.PostAsync("api/v1/projects/" + idProject + "/tasks/" + idTask+"/times", content);
+            var response = await client.PostAsync("api/v1/projects/" + proj + "/tasks/" + idTask+"/times", content);
+            var bodystringresponse = await response.Content.ReadAsStringAsync();
+            Console.WriteLine("hihi");
+
+            Console.WriteLine(bodystringresponse);
+
         }
 
-        public async Task putTimeAsync(int idProject, int idTask, int idTime, string start_time, string end_time)
+        public async Task putTimeAsync(int idTask, int idTime, string start_time, string end_time)
         {
             var values = new Dictionary<string, string>
             {
@@ -273,10 +277,14 @@ namespace TimeTracker.Apps.Services
                 { "start_time", start_time}
             };
             var json = JsonConvert.SerializeObject(values);
-            var content =
-                new StringContent(json, Encoding.UTF8, "application/json");
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
 
-            await client.PutAsync("api/v1/projects/" + idProject + "/tasks/" + idTask + "/times/"+idTime, content);
+            var response = await client.PutAsync("api/v1/projects/" + proj + "/tasks/" + idTask + "/times/"+idTime, content);
+
+            var bodystringresponse = await response.Content.ReadAsStringAsync();
+            Console.WriteLine("hihi");
+
+            Console.WriteLine(bodystringresponse);
 
         }
 

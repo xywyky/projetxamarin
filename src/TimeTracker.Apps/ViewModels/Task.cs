@@ -15,6 +15,7 @@ namespace TimeTracker.Apps.ViewModels
         public ICommand DeleteCommand { get; }
         public ICommand ModifCommand { get; }
         public ICommand HistoCommand { get; }
+        public ICommand TimerCommand { get; }
 
         public int Id
         {
@@ -28,11 +29,12 @@ namespace TimeTracker.Apps.ViewModels
             set => SetProperty(ref _name, value);
         }
 
-        public Tassk(ICommand deleteCommand, ICommand modifCommand, ICommand histoCommand)
+        public Tassk(ICommand deleteCommand, ICommand modifCommand, ICommand histoCommand, ICommand timerCommand)
         {
             DeleteCommand = deleteCommand;
             ModifCommand = modifCommand;
             HistoCommand = histoCommand;
+            TimerCommand = timerCommand;
         }
 
     }
