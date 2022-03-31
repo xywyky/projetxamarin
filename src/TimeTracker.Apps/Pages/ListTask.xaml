@@ -10,13 +10,12 @@
         <DataTemplate x:DataType="viewModels:Tassk" x:Key="TodoTemplate">
             <ViewCell>
                 <StackLayout Orientation="Vertical" HorizontalOptions="StartAndExpand">
-                    
-                        <Label Text="{Binding Name}"
+
+                    <Label Text="{Binding Name}"
                            FontSize="32"
                            LineBreakMode="WordWrap"
                         />
-
-                        <Button 
+                    <Button 
                                 Text="Historique"
                                 TextColor="Black"
                                 BackgroundColor="Gold"
@@ -27,9 +26,20 @@
                         />
 
                     <Button 
-                                Text="Nouveaux timer"
+                                Text="Début timer"
                                 TextColor="Black"
                                 BackgroundColor="LightGreen"
+                                Command="{Binding TimerCommand}"
+                                CommandParameter="{Binding .}"
+                                CornerRadius="32"
+                                HeightRequest="64"
+                        />
+                    <Button 
+                                Text="Fin timer"
+                                TextColor="Black"
+                                BackgroundColor="LightGreen"
+                                Command="{Binding FinTimerCommand}"
+                                CommandParameter="{Binding .}"
                                 CornerRadius="32"
                                 HeightRequest="64"
                         />

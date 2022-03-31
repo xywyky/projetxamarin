@@ -62,19 +62,43 @@ namespace TimeTracker.Apps.ViewModels
             return new Tassk(
                 new Command<Tassk>(DeleteAction),
                 new Command<Tassk>(ModifAction),
-                new Command<Tassk>(HistoAction)
+                new Command<Tassk>(HistoAction),
+                new Command<Tassk>(TimerAction),
+                new Command<Tassk>(FinTimerAction)
                 )
             {
                 Name = tassk.Name,
                 Id = tassk.Id,
-                times = tassk.times
-                Current = tassk.Temps.EndTime.Subtract(tassk.Temps.StartTime) 
+                times = tassk.times,
                 
             }
                 ;
 
 
-            return null;
+        }
+
+        private async void TimerAction(Tassk tassk)
+        {
+            int index = tassk.Id;
+            var todoService = DependencyService.Get<ApiService>();
+            DateTime i = new DateTime(2099, 9, 9, 9, 9, 9);
+            DateTime start = TimeZoneInfo.ConvertTimeToUtc(DateTime.Now);
+            await todoService.postTimeAsync(index, start.ToString("yyyy-MM-ddTHH:mm:ssZ"),
+               i.ToString("yyyy-MM-ddTHH:mm:ssZ")
+             );
+            todoService.getTasks(todoService.proj);
+
+
+        }
+
+        private async void FinTimerAction(Tassk tassk)
+        {
+            int index = tassk.Id;
+            Time last = tassk.times[tassk.times.Count - 1];
+            var todoService = DependencyService.Get<ApiService>();
+            DateTime end = TimeZoneInfo.ConvertTimeToUtc(DateTime.Now);
+            await todoService.putTimeAsync(index, last.Id, last.StartTime.AddHours(-2).ToString("yyyy-MM-ddTHH:mm:ssZ"), end.ToString("yyyy-MM-ddTHH:mm:ssZ"));
+            todoService.getTasks(todoService.proj);
 
         }
 

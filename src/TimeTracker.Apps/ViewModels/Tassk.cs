@@ -12,13 +12,14 @@ namespace TimeTracker.Apps.ViewModels
         public int _id;
         public string _name;
         public List<Time> times { get; set; }
-        public Time _temps;
-        private TimeSpan _current;
+        
 
 
         public ICommand DeleteCommand { get; }
         public ICommand ModifCommand { get; }
         public ICommand HistoCommand { get; }
+        public ICommand TimerCommand { get; }
+        public ICommand FinTimerCommand { get; }
 
         public int Id
         {
@@ -32,24 +33,15 @@ namespace TimeTracker.Apps.ViewModels
             set => SetProperty(ref _name, value);
         }
 
-        public Tassk(ICommand deleteCommand, ICommand modifCommand, ICommand histoCommand)
+        
+        public Tassk(ICommand deleteCommand, ICommand modifCommand, ICommand histoCommand, ICommand timerCommand, ICommand finTimerCommand )
         {
             DeleteCommand = deleteCommand;
             ModifCommand = modifCommand;
             HistoCommand = histoCommand;
-        }
+            TimerCommand = timerCommand;
+            FinTimerCommand = finTimerCommand;
 
-        public void Update()
-        {
-            Device.StartTimer(new TimeSpan(0, 0, 1), () =>
-            {
-                // do something every 1 second
-                Device.BeginInvokeOnMainThread(() =>
-                {
-                    Current = Current.Subtract(new TimeSpan(0,0,1));
-                });
-                return true; // runs again, or false to stop
-            });
         }
 
     }
