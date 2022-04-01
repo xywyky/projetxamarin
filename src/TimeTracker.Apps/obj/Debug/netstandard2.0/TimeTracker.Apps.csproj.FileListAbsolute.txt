@@ -39,3 +39,7 @@ C:/Users/neos8/Source/Repos/projet_xamarin/src/TimeTracker.Apps/obj/Debug/netsta
 /Users/bernagaudtristan/Documents/M1/semestre 2/Developpement_multi_plateforme/TP/Xamarin/TP1/Cours-Xamarin/project/src/TimeTracker.Apps/obj/Debug/netstandard2.0/Pages/ListTask.xaml.g.cs
 /Users/bernagaudtristan/Documents/M1/semestre 2/Developpement_multi_plateforme/TP/Xamarin/TP1/Cours-Xamarin/project/src/TimeTracker.Apps/obj/Debug/netstandard2.0/Pages/AddOrEditTask.xaml.g.cs
 /Users/bernagaudtristan/Documents/M1/semestre 2/Developpement_multi_plateforme/TP/Xamarin/TP1/Cours-Xamarin/project/src/TimeTracker.Apps/obj/Debug/netstandard2.0/Pages/ListTimerHistorique.xaml.g.cs
+C:/Users/neos8/Source/Repos/projet_xamarin/src/TimeTracker.Apps/obj/Debug/netstandard2.0/Pages/AddOrEditTask.xaml.g.cs
+C:/Users/neos8/Source/Repos/projet_xamarin/src/TimeTracker.Apps/obj/Debug/netstandard2.0/Pages/EditPass.xaml.g.cs
+C:/Users/neos8/Source/Repos/projet_xamarin/src/TimeTracker.Apps/obj/Debug/netstandard2.0/Pages/ListTask.xaml.g.cs
+C:/Users/neos8/Source/Repos/projet_xamarin/src/TimeTracker.Apps/obj/Debug/netstandard2.0/Pages/ListTimerHistorique.xaml.g.cs

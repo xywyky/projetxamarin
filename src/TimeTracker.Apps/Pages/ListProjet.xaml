@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <forms:BaseContentPage
     xmlns:forms="clr-namespace:Storm.Mvvm.Forms;assembly=Storm.Mvvm.Forms"
+    xmlns:forms1="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"  
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:viewModels="clr-namespace:TimeTracker.Apps.ViewModels"
@@ -49,20 +50,22 @@
             </ViewCell>
         </DataTemplate>
     </ContentPage.Resources>
-    
-    <Grid RowDefinitions="*, auto" Margin="12,0,12,48">
+     
+    <Grid RowDefinitions="*, auto" Margin="12,0,12,48" >
         <ListView ItemsSource="{Binding Projets2}"
                   Grid.Row="0"
                   HasUnevenRows="True"
                   ItemTemplate="{StaticResource TodoTemplate}"
                   />
 
-        <Grid ColumnDefinitions="*,*" Grid.Row="1">
+
+
+        <Grid ColumnDefinitions="*,*" Grid.Row="1" HeightRequest="60">
             <Button Text="Ajouter"
                 TextColor="Black"
                 BackgroundColor="LightGreen"
-                CornerRadius="16"
-                HeightRequest="32"
+                CornerRadius="32"
+                HeightRequest="64"
                     Grid.Column
                     ="0"
                 HorizontalOptions="FillAndExpand"
@@ -70,8 +73,9 @@
                 />
         <Button Text="Edit profil"
                 BackgroundColor="LightBlue"
-                CornerRadius="16"
-                HeightRequest="32"
+                CornerRadius="32"
+                HeightRequest="64"
+                 Padding="0"
                 Grid.Column
                     ="1"
                 HorizontalOptions="FillAndExpand"
@@ -79,6 +83,12 @@
                 />
 
             </Grid>
+
+        <forms1:ChartView x:Name="chartView" 
+                          Chart="{Binding Chart1}"
+                          Grid.Row="2"
+                          Margin="0,0,0,0"/>
+
     </Grid>
 
 

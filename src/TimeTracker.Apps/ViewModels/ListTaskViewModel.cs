@@ -15,6 +15,7 @@ namespace TimeTracker.Apps.ViewModels
 
         private ObservableCollection<Tassk> _tasks;
 
+
         public ICommand AddCommand { get; }
 
         public ObservableCollection<Tassk> Tasks
@@ -62,19 +63,41 @@ namespace TimeTracker.Apps.ViewModels
                 new Command<Tassk>(DeleteAction),
                 new Command<Tassk>(ModifAction),
                 new Command<Tassk>(HistoAction),
+                new Command<Tassk>(TimerAction),
                 new Command<Tassk>(FinTimerAction)
                 )
             {
                 Name = tassk.Name,
                 Id = tassk.Id,
-                times = tassk.times
-               
+                times = tassk.times,
                 
             }
                 ;
 
 
-            return null;
+        }
+
+        private async void TimerAction(Tassk tassk)
+        {
+            int index = tassk.Id;
+            var todoService = DependencyService.Get<ApiService>();
+            DateTime i = new DateTime(2099, 9, 9, 9, 9, 9);
+            DateTime start = TimeZoneInfo.ConvertTimeToUtc(DateTime.Now.ToLocalTime());
+            await todoService.postTimeAsync(index, start.ToString("yyyy-MM-ddTHH:mm:ssZ"),
+               i.ToString("yyyy-MM-ddTHH:mm:ssZ")
+             );
+            todoService.getTasks(todoService.proj);
+
+
+        }
+
+        private async void FinTimerAction(Tassk tassk)
+        {
+            int index = tassk.Id;
+            Time last = tassk.times[tassk.times.Count - 1];
+            var todoService = DependencyService.Get<ApiService>();
+            await todoService.putTimeAsync(index, last.Id, last.StartTime.ToString("yyyy-MM-ddTHH:mm:ssZ"), DateTime.Now.ToLocalTime().ToString("yyyy-MM-ddTHH:mm:ssZ"));
+            todoService.getTasks(todoService.proj);
 
         }
 
@@ -100,29 +123,6 @@ namespace TimeTracker.Apps.ViewModels
             var todoService = DependencyService.Get<ApiService>();
             todoService.deleteTaskAsync(index);
             todoService.getTasks(todoService.proj);
-        }
-
-        private async void TimerAction(Tassk tassk)
-        {
-            int index = tassk.Id;
-            var todoService = DependencyService.Get<ApiService>();
-            DateTime i = new DateTime(2099, 9, 9, 9, 9, 9);
-            await todoService.postTimeAsync(index, DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ssZ"),
-               i.ToString("yyyy-MM-ddTHH:mm:ssZ")
-             );
-            todoService.getTasks(todoService.proj);
-
-
-        }
-
-        private async void FinTimerAction(Tassk tassk)
-        {
-            int index = tassk.Id;
-            Time last = tassk.times[tassk.times.Count - 1];
-            var todoService = DependencyService.Get<ApiService>();
-            await todoService.putTimeAsync(index, last.Id, last.StartTime.AddHours(-2).ToString("yyyy-MM-ddTHH:mm:ssZ"), DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ssZ"));
-            todoService.getTasks(todoService.proj);
-
         }
     }
 }

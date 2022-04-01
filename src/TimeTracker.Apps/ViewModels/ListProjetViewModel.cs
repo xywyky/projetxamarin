@@ -3,10 +3,14 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using Microcharts;
+using Microcharts.Forms;
+using SkiaSharp;
 using Storm.Mvvm;
 using TimeTracker.Apps.Pages;
 using TimeTracker.Apps.Services;
 using Xamarin.Forms;
+using Entry = Microcharts.ChartEntry;
 
 namespace TimeTracker.Apps.ViewModels
 {
@@ -14,6 +18,16 @@ namespace TimeTracker.Apps.ViewModels
     {
 
         private ObservableCollection<Datum> _projet2;
+
+
+        private Chart _chart;
+
+
+        public Chart Chart1
+        {
+            get => _chart;
+            set => SetProperty(ref _chart, value);
+        }
 
         public ObservableCollection<Datum> Projets2
         {
@@ -27,10 +41,32 @@ namespace TimeTracker.Apps.ViewModels
         public ListProjetViewModel()
         {
             Projets2 = new ObservableCollection<Datum>();
-
             AddCommand = new Command(AddAction);
             EditCommand = new Command(EditAction);
         }
+
+
+        public List<ChartEntry> CreateEntires(ObservableCollection<Datum> _projet2)
+        {
+
+
+            List<ChartEntry> entries = new List<ChartEntry>();
+
+            Random r = new Random();
+            foreach (Datum project in _projet2)
+            {
+                Color color = Color.FromRgb(r.Next(0, 256), r.Next(0, 256), 0);
+                entries.Add(new Entry(project.Total_seconds)
+                    {
+                        Label = project.Name,
+                        Color = SKColor.Parse(color.ToHex())
+
+                    });
+                
+            }
+            return entries;
+        }
+
 
         private void TaskAction(Datum datum)
         {
@@ -58,6 +94,9 @@ namespace TimeTracker.Apps.ViewModels
                 Projets2.Add(Create(i));
             }
 
+            Chart1 = new LineChart {
+                Entries = CreateEntires(Projets2)
+            };
             return base.OnResume();
         }
 
@@ -70,7 +109,8 @@ namespace TimeTracker.Apps.ViewModels
             {
                 Name = datum._name,
                 Description = datum._description,
-                Id = datum._id
+                Id = datum._id,
+                Total_seconds = datum._total_seconds
             }
                 ;
 

@@ -250,7 +250,7 @@ namespace TimeTracker.Apps.Services
 
         }
 
-        public async Task postTimeAsync( int idTask, string start_time, string end_time)
+        public async Task postTimeAsync(int idTask, string start_time, string end_time)
         {
             var values = new Dictionary<string, string>
             {
@@ -261,12 +261,7 @@ namespace TimeTracker.Apps.Services
             var content =
                 new StringContent(json, Encoding.UTF8, "application/json");
 
-            var response = await client.PostAsync("api/v1/projects/" + proj + "/tasks/" + idTask+"/times", content);
-            var bodystringresponse = await response.Content.ReadAsStringAsync();
-            Console.WriteLine("hihi");
-
-            Console.WriteLine(bodystringresponse);
-
+            await client.PostAsync("api/v1/projects/" + proj + "/tasks/" + idTask+"/times", content);
         }
 
         public async Task putTimeAsync(int idTask, int idTime, string start_time, string end_time)
@@ -279,18 +274,13 @@ namespace TimeTracker.Apps.Services
             var json = JsonConvert.SerializeObject(values);
             var content = new StringContent(json, Encoding.UTF8, "application/json");
 
-            var response = await client.PutAsync("api/v1/projects/" + proj + "/tasks/" + idTask + "/times/"+idTime, content);
-
-            var bodystringresponse = await response.Content.ReadAsStringAsync();
-            Console.WriteLine("hihi");
-
-            Console.WriteLine(bodystringresponse);
+            await client.PutAsync("api/v1/projects/" + proj + "/tasks/" + idTask + "/times/"+idTime, content);
 
         }
 
-        public async Task deleteTimeAsync(int idProject, int idTask, int idTime)
+        public async Task deleteTimeAsync( int idTask, int idTime)
         {
-            await client.DeleteAsync("api/v1/projects/" + idProject + "/tasks/" + idTask + "/times/" + idTime);
+            await client.DeleteAsync("api/v1/projects/" + proj + "/tasks/" + idTask + "/times/" + idTime);
 
         }
 

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Input;
+using Microcharts;
 using Newtonsoft.Json;
 using Storm.Mvvm;
 
@@ -12,7 +13,7 @@ namespace TimeTracker.Apps.ViewModels
         public int _id; 
         public string _name;
         public string _description;
-        public int _total_seconds;
+        public long _total_seconds;
 
         public Datum(ICommand deleteCommand, ICommand modifCommand, ICommand taskCommand)
         {
@@ -21,10 +22,17 @@ namespace TimeTracker.Apps.ViewModels
             TaskCommand = taskCommand;
         }
 
+
         public int Id
         {
             get => _id;
             set => SetProperty(ref _id, value);
+        }
+
+        public long Total_seconds
+        {
+            get => _total_seconds;
+            set => SetProperty(ref _total_seconds, value);
         }
 
         public string Name

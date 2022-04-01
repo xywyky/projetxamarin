@@ -27,4 +27,9 @@
 /Users/bernagaudtristan/Documents/M1/semestre 2/Developpement_multi_plateforme/TP/Xamarin/TP1/Cours-Xamarin/project/src/TimeTracker.Apps/bin/Debug/netstandard2.0/TimeTracker.Apps.dll
 /Users/bernagaudtristan/.nuget/packages/xamarin.forms/5.0.0.2337/lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll
 /Users/bernagaudtristan/.nuget/packages/storm.mvvm.forms/2.5.0/lib/netstandard2.0/Storm.Mvvm.Forms.dll
+/Users/bernagaudtristan/.nuget/packages/microcharts.forms/1.0.0-preview1/lib/netstandard2.0/Microcharts.dll
+/Users/bernagaudtristan/.nuget/packages/skiasharp/2.80.3/lib/xamarinios1.0/SkiaSharp.dll
 /Users/bernagaudtristan/.nuget/packages/newtonsoft.json/13.0.1/lib/netstandard2.0/Newtonsoft.Json.dll
+/Users/bernagaudtristan/.nuget/packages/microcharts.forms/1.0.0-preview1/lib/netstandard2.0/Microcharts.Forms.dll
+/Users/bernagaudtristan/.nuget/packages/skiasharp.views.forms/2.80.3/lib/xamarinios1.0/SkiaSharp.Views.Forms.dll
+/Users/bernagaudtristan/.nuget/packages/skiasharp.views/2.80.3/lib/xamarinios1.0/SkiaSharp.Views.iOS.dll

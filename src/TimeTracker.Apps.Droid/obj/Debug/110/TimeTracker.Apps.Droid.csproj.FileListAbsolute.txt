@@ -654,3 +654,5 @@ C:\Users\neos8\Source\Repos\projet_xamarin\src\TimeTracker.Apps.Droid\obj\Debug\
 C:\Users\neos8\Source\Repos\projet_xamarin\src\TimeTracker.Apps.Droid\obj\Debug\110\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\neos8\Source\Repos\projet_xamarin\src\TimeTracker.Apps.Droid\obj\Debug\110\stamp\_ResolveLibraryProjectImports.stamp
 C:\Users\neos8\Source\Repos\projet_xamarin\src\TimeTracker.Apps.Droid\obj\Debug\110\android\assets\TimeTracker.Apps.dll.mdb
+C:\Users\neos8\Source\Repos\projet_xamarin\src\TimeTracker.Apps.Droid\bin\Debug\TimeTracker.Apps.dll.mdb
+C:\Users\neos8\Source\Repos\projet_xamarin\src\TimeTracker.Apps.Droid\obj\Debug\110\android\assets\TimeTracker.Apps.pdb
